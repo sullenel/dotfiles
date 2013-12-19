@@ -1,0 +1,17 @@
+require 'irb/completion'
+
+IRB.conf[:SAVE_HISTORY] = 1000
+IRB.conf[:AUTO_INDENT]  = true
+IRB.conf[:INSPECT_MODE] = true
+
+
+def time(&block)
+  require 'benchmark'
+  result = nil
+
+  timing = Benchmark.measure do
+    result = block.call
+  end
+  puts "It took: #{timing}"
+  result
+end
