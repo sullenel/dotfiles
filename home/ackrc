@@ -1,0 +1,7 @@
+--sort-files
+--flush
+--smart-case
+
+--type-add=ruby=rake,haml
+--type-add=vim=vimrc
+--type-add=js=json
