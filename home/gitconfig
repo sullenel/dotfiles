@@ -1,0 +1,22 @@
+[user]
+        name = sullenel
+        email = sullenerd@gmail.com
+[core]
+        editor = vim
+        autocrlf = input
+        safecrlf = true
+        pager = less -R
+[color]
+        ui = always
+[help]
+        autocorrect = 1
+[credential]
+        helper = cache --timeout=3600
+[alias]
+        pl = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        st = status
+        rb = rebase
+        ci = commit
+        co = checkout
+[merge]
+        tool = vimdiff
