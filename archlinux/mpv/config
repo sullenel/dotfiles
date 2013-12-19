@@ -1,0 +1,12 @@
+# Audio settings
+ao=alsa
+softvol=no
+gapless-audio=yes
+no-cache=yes
+
+# Video Settings
+sub-text-font="Ubuntu Regular"
+sub-scale=1
+
+# Other settings
+slang=en
