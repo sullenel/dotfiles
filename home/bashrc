@@ -1,0 +1,115 @@
+# -----------------------------------------------------------------------------
+# ~/.bashrc
+# -----------------------------------------------------------------------------
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+# -----------------------------------------------------------------------------
+# OPTIONS
+# -----------------------------------------------------------------------------
+# History
+HISTCONTROL=ignoredups:ignorespace:erasedups
+HISTIGNORE=ls:l:ll:l1:la:df:du:top:bg:fg:cp:rm:mv:mkdir:reboot:suspend
+HISTSIZE=5000
+HISTFILESIZE=5000
+
+shopt -s autocd
+shopt -s cdspell
+shopt -s cmdhist
+shopt -s checkwinsize
+shopt -s histappend
+shopt -s histreedit
+shopt -s expand_aliases
+shopt -s extglob
+
+
+# -----------------------------------------------------------------------------
+# VARIABLES
+# -----------------------------------------------------------------------------
+# Prompt
+export PS1="\[\e[1;90m\]→ \W\[\e[0;31m\] $ \[\e[0m\]"
+
+# Editor
+export EDITOR="vim"
+export VISUAL=$EDITOR
+
+# Browser
+export BROWSER="chromium"
+
+# Python
+export PYTHONSTARTUP="$HOME/.pyrc"
+
+# rbenv
+if [[ -d "$HOME/.rbenv" ]]; then
+    export PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init - bash)"
+    source $HOME/.rbenv/completions/rbenv.bash
+fi
+
+
+# -----------------------------------------------------------------------------
+# ALIASES
+# -----------------------------------------------------------------------------
+alias ls="ls --color=auto"
+alias l="ls"
+alias la="ls -A"
+alias ll="ls -lh"
+alias l1="ls -1"
+alias lr="ls -R"
+alias lx="ll -BX" # extension
+alias lz="ll -rS" # size
+alias lt="ll -rt" # date
+alias ".."="cd ../"
+alias "..."="cd ../../"
+alias "...."="cd ../../../"
+alias dir="dir --color=auto"
+alias grep="grep --color=auto"
+alias cp="cp -iv"
+alias mv="mv -iv"
+alias rm="rm -Iv"
+alias mkdir="mkdir -pv"
+alias ln="ln -i"
+alias df="df -h"
+alias du="du -h"
+alias free="free -h"
+alias diff="colordiff"
+alias h="history"
+alias v="vim"
+alias cltr="rm -rf ~/.local/share/Trash/"
+alias today="date '+%A, %B %d, %Y [%T]'"
+alias hgrep="history | grep $1"
+alias ports="netstat -tulpn"
+alias hfill="hsetroot -fill"
+alias htile="hsetroot -tile"
+alias fping="ping -c 5 -n -i 0.2 -W1"
+alias ftraceroute="traceroute -n -w 3 -q 1"
+alias myip="wget -O - -q icanhazip.com"
+
+# Arch Linux specific
+if [[ -f /etc/arch-release ]]; then
+    alias reboot="systemctl reboot"
+    alias poweroff="systemctl poweroff"
+    alias halt="systemctl halt"
+    alias suspnd="systemctl suspend"
+    alias yolo="packer -Syyu"
+fi
+
+
+# -----------------------------------------------------------------------------
+# FUNCTIONS
+# -----------------------------------------------------------------------------
+# Make directory and cd into it
+mkcd() {
+    mkdir -p "$1"
+    cd "$1"
+}
+
+# Convert a man page to a pdf file
+man2pdf() {
+    if [ $# -eq 0 ]; then
+        echo "Usage: man2pdf <command>"
+    else
+        man -t $1 | ps2pdf - > ${1}.pdf
+    fi
+}
