@@ -1,0 +1,6 @@
+style "vimfix" {
+    bg[NORMAL] = "#1c1b1a"      # badwolf
+    # bg[NORMAL] = "#002A35"    # solarized
+    # bg[NORMAL] = "#151515"    # jellybeans
+}
+widget "vim-main-window.*GtkForm" style "vimfix"
