@@ -1,0 +1,77 @@
+# override the defaut snippet for methods
+snippet def "Define a new method" !b
+def method_name
+end
+endsnippet
+
+
+snippet init "Initialize" !b
+def initialize
+  $0
+end
+endsnippet
+
+
+snippet ic "Include" !b
+include $0
+endsnippet
+
+
+snippet et "Extend" !b
+extend ${1:self}
+endsnippet
+
+
+snippet req "Require" !b
+require '$0'
+endsnippet
+
+
+snippet rr "Require relative" !b
+require_relative '$0'
+endsnippet
+
+
+snippet de "Do/end block" !w
+do
+end
+endsnippet
+
+
+snippet mm "method_missing" !b
+def method_missing($0)
+end
+endsnippet
+
+
+snippet bg "block_given?" !w
+block_given?
+endsnippet
+
+
+# RSpec Snippets
+snippet it "RSpec 'it' block" !b
+it "should ${1:description}" do
+end
+endsnippet
+
+
+snippet i "RSpec inline 'it' block" !b
+it { should $0 }
+endsnippet
+
+
+snippet des "RSpec 'describe' block" !b
+describe ${1:subject} do
+end
+endsnippet
+
+
+snippet b "RSpec 'before' block" !b
+before { $0 }
+endsnippet
+
+
+snippet let "RSpec 'let' block" !b
+let(:$0) { }
+endsnippet
