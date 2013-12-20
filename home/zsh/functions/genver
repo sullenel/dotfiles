@@ -1,0 +1,7 @@
+#
+# Generate a version number
+#
+
+[[ -d $PWD/.git/ ]] && (git log --format=oneline | wc -l) || echo "No repository found"
+
+# vim: set ft=zsh:

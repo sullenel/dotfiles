@@ -1,0 +1,26 @@
+#
+# Split a flac file into multiple files/tracks
+# Usage: $0 <cue file> <flac file> <directory to save tracks>
+#
+
+if [[ $# -eq 3 ]]; then
+    local cuefile="$1"
+    local flacfile="$2"
+    local dir="$3"
+
+    echo "-> Creating '$dir'" 
+    mkdir -p $dir
+
+    echo "\n-> Splitting $flacfile"
+    shnsplit -w -f $cuefile -t '%n_%p_%t' -o 'flac flac' -d $dir -P spin -- $flacfile
+    cuetag.sh $cuefile $dir/*.flac
+
+    echo "\n-> Deleting"
+    rm -i $cuefile
+    rm -i $flacfile
+    echo "\n-> Done"
+else
+    echo "Usage: $0 <cue> <flac> <directory>"
+fi
+
+# vim: set ft=zsh:

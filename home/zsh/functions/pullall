@@ -1,0 +1,19 @@
+#
+# Git/Bzr pull all subdirectories from the current directory
+#
+
+for dir in *(/); do
+    if [[ -d $dir/.git ]]; then
+        cd "$dir" && printf "-> in %40.40s " $dir
+        git pull -q && echo "| Done"
+        cd ../
+    elif [[ -d $dir/.bzr ]]; then
+        cd "$dir" && printf "-> in %40.40s " $dir
+        bzr pull -q && echo "| Done"
+        cd ../
+    else
+        printf "-> %43.43s | Skipped\n" $dir
+    fi
+done
+
+# vim: set ft=zsh:

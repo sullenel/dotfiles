@@ -1,0 +1,11 @@
+#
+# Convert a man page to a pdf file
+#
+
+if [[ $# -eq 0 ]]; then
+    echo "Usage: $0 <man page>"
+else
+    man -t "$1" | ps2pdf - > "$1".pdf
+fi
+
+# vim: set ft=zsh:

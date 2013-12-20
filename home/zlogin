@@ -1,0 +1,4 @@
+# -----------------------------------------------------------------------------
+# - sourced in login shells after ~/.zshrc
+# - used for commands that should be executed only in login shells
+# -----------------------------------------------------------------------------

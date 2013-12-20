@@ -1,0 +1,5 @@
+# -----------------------------------------------------------------------------
+# - sourced on all invocations of the shell
+# - used to set the command search path, environment variables
+# - should not contain commands that produce output
+# -----------------------------------------------------------------------------

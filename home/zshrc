@@ -1,0 +1,27 @@
+# -----------------------------------------------------------------------------
+# - sourced in interactive shells after ~/.zshenv
+# - used to set up aliases, functions, options, key bindings, etc.
+# -----------------------------------------------------------------------------
+
+ZSH_DIR=$HOME/.zsh
+
+# Settings
+[[ -f $ZSH_DIR/settings.zsh ]] && source $ZSH_DIR/settings.zsh
+
+# Key bindings
+[[ -f $ZSH_DIR/keybinds.zsh ]] && source $ZSH_DIR/keybinds.zsh
+
+# Functions
+[[ -f $ZSH_DIR/functions.zsh ]] && source $ZSH_DIR/functions.zsh
+
+# Prompts
+[[ -f $ZSH_DIR/prompts.zsh ]] && source $ZSH_DIR/prompts.zsh
+
+# Aliases
+[[ -f $ZSH_DIR/aliases.zsh ]] && source $ZSH_DIR/aliases.zsh
+
+# Plugins
+[[ -f $ZSH_DIR/plugins.zsh ]] && source $ZSH_DIR/plugins.zsh
+
+# Environment
+[[ -f $ZSH_DIR/env.zsh ]] && source $ZSH_DIR/env.zsh
