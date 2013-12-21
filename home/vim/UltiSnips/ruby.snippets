@@ -50,28 +50,40 @@ endsnippet
 
 
 # RSpec Snippets
-snippet it "RSpec 'it' block" !b
+snippet it "RSpec 'it'" !b
 it "should ${1:description}" do
 end
 endsnippet
 
 
-snippet i "RSpec inline 'it' block" !b
+snippet i "RSpec inline 'it'" !b
 it { should $0 }
 endsnippet
 
 
-snippet des "RSpec 'describe' block" !b
+snippet des "RSpec 'describe'" !b
 describe ${1:subject} do
 end
 endsnippet
 
 
-snippet b "RSpec 'before' block" !b
+snippet be "RSpec 'before'" !b
+before do
+  $0
+end
+endsnippet
+
+
+snippet b "RSpec inline 'before'" !b
 before { $0 }
 endsnippet
 
 
-snippet let "RSpec 'let' block" !b
+snippet let "RSpec 'let'" !b
 let(:$0) { }
+endsnippet
+
+
+snippet e "RSpec inline 'expect'" !b
+expect { $0 }
 endsnippet
