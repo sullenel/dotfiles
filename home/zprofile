@@ -4,3 +4,6 @@
 
 # disable flow control
 stty -ixon
+
+# start the ssh-agent
+[[ -z $TMUX ]] && eval "$(ssh-agent)"
