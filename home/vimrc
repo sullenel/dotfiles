@@ -136,7 +136,10 @@
 " -----------------------------------------------------------------------------
 " BACKUP. HISTORY. UNDO.
 " -----------------------------------------------------------------------------
-  " Don't make backups #YOLO
+  " Don't leave a backup after the file has been successfully written #YOLO
+  set nobackup
+
+  " Don't make a backup before overwriting a file #YOLO
   set nowritebackup
 
   " Don't use a swapfile for the buffer #YOLO
