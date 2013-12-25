@@ -439,8 +439,8 @@
   nnoremap <CR> :nohlsearch<CR>
 
   " Editing
-  nnoremap <silent> <leader>o o<esc>k<CR>
-  nnoremap <silent> <leader>O O<esc>k<CR>
+  nnoremap <leader>o o<esc>k<CR>
+  nnoremap <leader>O O<esc>k<CR>
   nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
   nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
   nnoremap <leader>w :w!<CR>
