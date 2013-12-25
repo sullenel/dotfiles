@@ -25,6 +25,7 @@
   Bundle 'tpope/vim-commentary'
   Bundle 'bling/vim-airline'
   Bundle 'ervandew/supertab'
+  Bundle 'troydm/easytree.vim'
 
   " Syntax
   Bundle 'aliva/vim-fish'
@@ -458,6 +459,7 @@
   nnoremap <leader>p :CtrlP<CR>
   nnoremap <leader>b :CtrlPBuffer<CR>
   nnoremap <leader>T :CtrlPBufTag<CR>
+  nnoremap <leader>et :EasyTree<CR>
   
   " Functions
   if exists("$TMUX")
