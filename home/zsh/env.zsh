@@ -7,7 +7,6 @@
 
 # Python
 export PYTHONSTARTUP="$HOME/.pyrc"
-export PYTHONPATH=/usr/lib/python2.7/site-packages:/usr/lib/python3.3/site-packages
 
 # Editor
 export EDITOR="vim"
