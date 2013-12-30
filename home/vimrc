@@ -176,6 +176,7 @@
   " A list of file patterns to be ignored
   set wildignore=*.obj
   set wildignore+=*.pyc
+  set wildignore+=__pycache__/*
   set wildignore+=*.class
   set wildignore+=*.png
   set wildignore+=*.jpg
