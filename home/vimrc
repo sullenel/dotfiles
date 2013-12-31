@@ -240,7 +240,7 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Set the colorscheme
-  colorscheme syo
+  colorscheme badwolf
 
   " Minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
