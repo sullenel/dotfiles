@@ -457,7 +457,6 @@
   nnoremap <leader><leader> <C-^>
 
   " Plugins
-  nnoremap <leader>p :CtrlP<CR>
   nnoremap <leader>b :CtrlPBuffer<CR>
   nnoremap <leader>T :CtrlPBufTag<CR>
   nnoremap <leader>et :EasyTree<CR>
