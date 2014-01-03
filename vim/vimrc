@@ -260,7 +260,7 @@
   endif
 
   " Vertical separators
-  set fillchars+=vert:\|
+  set fillchars+=vert:\¦
 
   " Show unprintable characters as hex numbers instead of ^/~C characters
   set display+=uhex
