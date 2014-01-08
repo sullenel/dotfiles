@@ -51,29 +51,23 @@
   " Airline: theme
   let g:airline_theme = 'simple'
 
-  " Airline: Enable paste detection
+  " Airline: enable paste detection
   let g:airline_detect_paste = 1
 
-  " Airline: Remove left and right separators
+  " Airline: remove left and right separators
   let g:airline_left_sep = ''
   let g:airline_right_sep = ''
 
-  " Airline: Disable warnings
+  " Airline: disable warnings
   let g:airline_section_warning = ''
 
-  " Airline: Disable CSV integration
+  " Airline: disable CSV integration
   let g:airline#extensions#csv#enabled = 0
 
-  " Airline: Disable whitespace detection
+  " Airline: disable whitespace detection
   let g:airline_detect_whitespace = 0
 
-  " Airline: Display all buffers when there is only one tab open
-  " let g:airline#extensions#tabline#enabled = 1
-
-  " Supertab: navigate the completion menu from top to bottom
-  " let g:SuperTabDefaultCompletionType = '<C-n>'
-
-  " SuperTab: Fix for double new lines
+  " SuperTab: fix for double new lines
   let g:SuperTabCrMapping = 0
 
   " CtrlP: custom ignore patterns
@@ -86,6 +80,11 @@
     " CtrlP: disable caching
     let g:ctrlp_use_caching = 0
   endif
+
+   " UltiSnips: define the keys for triggering UltiSnips actions
+   let g:UltiSnipsExpandTrigger = "<tab>"
+   let g:UltiSnipsJumpForwardTrigger = "<tab>"
+   let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 " -----------------------------------------------------------------------------
 
 
@@ -130,6 +129,9 @@
 
   " Set the encryption method
   set cryptmethod=blowfish
+
+  " Set the behavior when switching between buffers
+  set switchbuf=useopen,usetab
 " -----------------------------------------------------------------------------
 
 
