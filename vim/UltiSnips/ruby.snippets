@@ -38,6 +38,7 @@ endsnippet
 # RSpec Snippets
 snippet it "RSpec 'it'" !b
 it "should ${1:description}" do
+  $0
 end
 endsnippet
 
@@ -49,6 +50,7 @@ endsnippet
 
 snippet des "RSpec 'describe'" !b
 describe ${1:subject} do
+  $0
 end
 endsnippet
 
@@ -66,7 +68,7 @@ endsnippet
 
 
 snippet let "RSpec 'let'" !b
-let(:$0) { }
+let(:$1) { $0 }
 endsnippet
 
 
