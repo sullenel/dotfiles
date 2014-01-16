@@ -26,6 +26,7 @@
   Bundle 'bling/vim-airline'
   Bundle 'ervandew/supertab'
   Bundle 'troydm/easytree.vim'
+  Bundle 'scrooloose/syntastic'
 
   " Syntax
   Bundle 'aliva/vim-fish'
