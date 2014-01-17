@@ -9,9 +9,6 @@
 " -----------------------------------------------------------------------------
 " APPEARANCE
 " -----------------------------------------------------------------------------
-  " Colorscheme
-  colorscheme base16-monokai
-
   " Font
   " set guifont=PragmataPro\ 12
   set guifont=Consola\ Mono\ 11
