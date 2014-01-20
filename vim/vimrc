@@ -27,6 +27,7 @@
   Bundle 'ervandew/supertab'
   Bundle 'troydm/easytree.vim'
   Bundle 'scrooloose/syntastic'
+  Bundle 'terryma/vim-multiple-cursors'
 
   " Syntax
   Bundle 'aliva/vim-fish'
