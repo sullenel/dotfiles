@@ -449,8 +449,6 @@
   " Editing
   nnoremap <leader>o o<esc>k<CR>
   nnoremap <leader>O O<esc>k<CR>
-  nnoremap <leader>" viw<esc>a"<esc>hbi"<esc>lel
-  nnoremap <leader>' viw<esc>a'<esc>hbi'<esc>lel
   nnoremap <leader>w :w!<CR>
 
   " Tabs
@@ -503,10 +501,6 @@
   vnoremap <leader>y "+y
   vnoremap <Tab> >gv
   vnoremap <S-Tab> <gv
-
-  " Wrap selection in single and double quotes
-  vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>
-  vnoremap <leader>" <esc>`>a"<esc>`<i"<esc>
 
   " Plugins
   vnoremap <leader>ae :Tabularize /=<CR>
