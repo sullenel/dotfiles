@@ -249,7 +249,7 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Set the colorscheme
-  colorscheme hybrid
+  colorscheme noctu
 
   " Minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
