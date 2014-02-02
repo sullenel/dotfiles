@@ -46,6 +46,8 @@
   Bundle 'sjl/badwolf'
   Bundle 'altercation/vim-colors-solarized'
   Bundle 'w0ng/vim-hybrid'
+  Bundle 'noahfrederick/vim-noctu'
+  Bundle 'noahfrederick/vim-hemisu'
 " -----------------------------------------------------------------------------
 
 
