@@ -15,6 +15,9 @@
 
   " Add some space between rows
   set linespace=2
+
+  " Colorscheme
+  colorscheme molokai
 " -----------------------------------------------------------------------------
 
 
