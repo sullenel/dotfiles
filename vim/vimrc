@@ -35,7 +35,6 @@
   " Syntax
   Bundle 'aliva/vim-fish'
   Bundle 'Keithbsmiley/rspec.vim'
-  Bundle 'slim-template/vim-slim'
   Bundle 'peterhoeg/vim-qml'
   Bundle 'elixir-lang/vim-elixir'
   Bundle 'sunaku/vim-ruby-minitest'
