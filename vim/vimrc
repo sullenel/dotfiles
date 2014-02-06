@@ -54,7 +54,7 @@
 " SETTINGS FOR PLUGINS
 " -----------------------------------------------------------------------------
   " Airline: theme
-  let g:airline_theme = 'simple'
+  let g:airline_theme = 'powerlineish'
 
   " Airline: enable paste detection
   let g:airline_detect_paste = 1
