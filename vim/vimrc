@@ -338,9 +338,6 @@
   " Copy indent from current line when starting a new one
   set autoindent
 
-  " Smart autoindenting #wtf
-  set smartindent
-
   " Use spaces in place of tab characters
   set expandtab
 
