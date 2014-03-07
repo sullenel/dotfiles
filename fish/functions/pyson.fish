@@ -1,3 +1,3 @@
 function pyson -d 'Python JSON Module'
-    python -mjson.tool
+    python -mjson.tool $argv
 end
