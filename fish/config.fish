@@ -13,6 +13,9 @@ set fish_color_command blue --bold
 # set the colour for comments
 set fish_color_comment magenta
 
+# don't copy to system clipboard
+set FISH_CLIPBOARD_CMD "cat"
+
 
 # -----------------------------------------------------------------------------
 # VARIABLES
