@@ -36,34 +36,20 @@ set -x TERM xterm-256color
 # -----------------------------------------------------------------------------
 # LPrompt
 function fish_prompt
-    set -l red (set_color -o red)
+    set -l blue (set_color -o blue)
+    set -l black (set_color -o black)
     set -l normal (set_color normal)
-    set -l arrow "$red➜ "
+    set -l arrow "$blue➜"
+    set -l cwd $black(prompt_pwd)
 
-    echo -n -s $arrow $normal
+    echo -n -s $cwd ' ' $arrow ' ' $normal
 end
 
 
 # RPrompt
 function fish_right_prompt
-    function __is_git_dir
-        [ -d (pwd)/.git ]; or git rev-parse --is-inside-work-tree >/dev/null ^&1
-    end
+    set -l white (set_color white)
+    set -l files $white(ls -A | wc -l)
 
-    function __git_branch_name
-        if __is_git_dir
-            git rev-parse --abbrev-ref HEAD
-        end
-    end
-
-    set -l cyan (set_color -o cyan)
-    set -l black (set_color --bold black)
-    set -l yellow (set_color --bold yellow)
-    set -l normal (set_color normal)
-
-
-    set -l cwd $cyan(basename (prompt_pwd))" "
-    set -l gitbranch $black"on $yellow"(__git_branch_name)$normal
-
-    echo -n -s $cwd $gitbranch
+    echo -n -s $files
 end
