@@ -20,22 +20,8 @@ set FISH_CLIPBOARD_CMD "cat"
 # -----------------------------------------------------------------------------
 # VARIABLES
 # -----------------------------------------------------------------------------
-# Path
-if status --is-login
-    set PATH $PATH /usr/bin /sbin
-    set PATH /usr/bin/core_perl $PATH
-    set PATH /usr/bin/vendor_perl $PATH
-    set PATH /usr/sbin $PATH
-    set PATH /usr/local/sbin $PATH
-    set PATH /usr/local/bin $PATH
-    set PATH $HOME/.rbenv/bin $PATH
-end
-
-# Fix for the 'rbenv shell' command
-if which rbenv >/dev/null ^&1
-    . ~/.bin/sh/shell.fish
-end
-
+# rbenv
+status --is-interactive; and source (rbenv init -|psub)
 
 # Editor
 setenv EDITOR "vim"
