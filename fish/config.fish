@@ -16,6 +16,9 @@ set fish_color_comment magenta
 # don't copy to system clipboard
 set FISH_CLIPBOARD_CMD "cat"
 
+# remove weird output before each prompt
+function fish_title;end
+
 
 # -----------------------------------------------------------------------------
 # VARIABLES
