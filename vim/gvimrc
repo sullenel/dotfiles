@@ -10,11 +10,10 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Font
-  " set guifont=PragmataPro\ 12
-  set guifont=Consola\ Mono\ 11
+  set guifont=Consolas\ 13
 
   " Add some space between rows
-  set linespace=2
+  set linespace=1
 
   " Colorscheme
   colorscheme molokai
