@@ -1,3 +1,3 @@
 function yolo -d 'Upgrade'
-  packer -Syyu $argv
+  packer -Syu $argv
 end
