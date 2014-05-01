@@ -19,33 +19,33 @@
   call vundle#rc()
 
   " Actual plugins
-  Bundle 'gmarik/vundle'
-  Bundle 'kien/ctrlp.vim'
-  Bundle 'SirVer/ultisnips'
-  Bundle 'godlygeek/tabular'
-  Bundle 'dhruvasagar/vim-table-mode'
-  Bundle 'mattn/emmet-vim'
-  Bundle 'tpope/vim-commentary'
-  Bundle 'bling/vim-airline'
-  Bundle 'troydm/easytree.vim'
-  Bundle 'scrooloose/syntastic'
-  Bundle 'tpope/vim-surround'
+  Plugin 'gmarik/vundle'
+  Plugin 'kien/ctrlp.vim'
+  Plugin 'SirVer/ultisnips'
+  Plugin 'godlygeek/tabular'
+  Plugin 'dhruvasagar/vim-table-mode'
+  Plugin 'mattn/emmet-vim'
+  Plugin 'tpope/vim-commentary'
+  Plugin 'bling/vim-airline'
+  Plugin 'troydm/easytree.vim'
+  Plugin 'scrooloose/syntastic'
+  Plugin 'tpope/vim-surround'
 
   " Syntax
-  Bundle 'aliva/vim-fish'
-  Bundle 'Keithbsmiley/rspec.vim'
-  Bundle 'peterhoeg/vim-qml'
-  Bundle 'elixir-lang/vim-elixir'
-  Bundle 'sunaku/vim-ruby-minitest'
+  Plugin 'aliva/vim-fish'
+  Plugin 'Keithbsmiley/rspec.vim'
+  Plugin 'peterhoeg/vim-qml'
+  Plugin 'elixir-lang/vim-elixir'
+  Plugin 'sunaku/vim-ruby-minitest'
 
   " Colorschemes
-  Bundle 'nanotech/jellybeans.vim'
-  Bundle 'tomasr/molokai'
-  Bundle 'sjl/badwolf'
-  Bundle 'altercation/vim-colors-solarized'
-  Bundle 'w0ng/vim-hybrid'
-  Bundle 'noahfrederick/vim-noctu'
-  Bundle 'noahfrederick/vim-hemisu'
+  Plugin 'nanotech/jellybeans.vim'
+  Plugin 'tomasr/molokai'
+  Plugin 'sjl/badwolf'
+  Plugin 'altercation/vim-colors-solarized'
+  Plugin 'w0ng/vim-hybrid'
+  Plugin 'noahfrederick/vim-noctu'
+  Plugin 'noahfrederick/vim-hemisu'
 " -----------------------------------------------------------------------------
 
 
