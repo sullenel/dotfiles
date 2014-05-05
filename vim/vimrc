@@ -23,7 +23,7 @@
   Plugin 'kien/ctrlp.vim'
   Plugin 'SirVer/ultisnips'
   Plugin 'honza/vim-snippets'
-  Plugin 'godlygeek/tabular'
+  Plugin 'junegunn/vim-easy-align'
   Plugin 'dhruvasagar/vim-table-mode'
   Plugin 'mattn/emmet-vim'
   Plugin 'tpope/vim-commentary'
@@ -469,6 +469,9 @@
     nnoremap <leader>c :call OpenDirInTmuxPane(expand('%:p:h'))<CR>
   endif
   nnoremap <leader>r :call RenameFile()<CR>
+
+  " Start interactive EasyAlign with a Vim movement
+  nmap <Leader>a <Plug>(EasyAlign)
 " -----------------------------------------------------------------------------
 
 
@@ -500,9 +503,8 @@
   vnoremap <Tab> >gv
   vnoremap <S-Tab> <gv
 
-  " Plugins
-  vnoremap <leader>ae :Tabularize /=<CR>
-  vnoremap <leader>ar :Tabularize /=><CR>
+  " Start interactive EasyAlign in visual mode
+  vmap <Enter> <Plug>(EasyAlign)
 " -----------------------------------------------------------------------------
 
 
