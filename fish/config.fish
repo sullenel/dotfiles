@@ -39,11 +39,11 @@ set -x TERM xterm-256color
 # -----------------------------------------------------------------------------
 # LPrompt
 function fish_prompt
+    set -l red (set_color -o red)
     set -l blue (set_color -o blue)
-    set -l black (set_color -o black)
     set -l normal (set_color normal)
-    set -l arrow "$blue➜"
-    set -l cwd $black(prompt_pwd)
+    set -l arrow "$red➜"
+    set -l cwd $blue(prompt_pwd)
 
     echo -n -s $cwd ' ' $arrow ' ' $normal
 end
