@@ -40,7 +40,6 @@
   Plugin 'sunaku/vim-ruby-minitest'
 
   " Colorschemes
-  Plugin 'nanotech/jellybeans.vim'
   Plugin 'tomasr/molokai'
   Plugin 'sjl/badwolf'
   Plugin 'altercation/vim-colors-solarized'
