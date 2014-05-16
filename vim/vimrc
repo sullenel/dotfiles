@@ -37,6 +37,7 @@
   Plugin 'Keithbsmiley/rspec.vim'
   Plugin 'peterhoeg/vim-qml'
   Plugin 'sunaku/vim-ruby-minitest'
+  Plugin 'tpope/vim-haml'
 
   " Colorschemes
   Plugin 'tomasr/molokai'
