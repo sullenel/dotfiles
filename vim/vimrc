@@ -36,7 +36,6 @@
   Plugin 'aliva/vim-fish'
   Plugin 'Keithbsmiley/rspec.vim'
   Plugin 'peterhoeg/vim-qml'
-  Plugin 'elixir-lang/vim-elixir'
   Plugin 'sunaku/vim-ruby-minitest'
 
   " Colorschemes
