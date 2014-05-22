@@ -38,6 +38,7 @@
   Plugin 'peterhoeg/vim-qml'
   Plugin 'sunaku/vim-ruby-minitest'
   Plugin 'tpope/vim-haml'
+  Plugin 'jimenezrick/vimerl'
 
   " Colorschemes
   Plugin 'tomasr/molokai'
@@ -90,6 +91,9 @@
 
   " UltiSnips: edit snippets in a vertical window
   let g:UltiSnipsEditSplit="vertical"
+
+  " Vimerl: don't replace the content of the current buffer when loading a code skeleton
+  let erlang_skel_replace = 0
 " -----------------------------------------------------------------------------
 
 
