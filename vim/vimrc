@@ -28,7 +28,6 @@
   Plugin 'mattn/emmet-vim'
   Plugin 'tpope/vim-commentary'
   Plugin 'bling/vim-airline'
-  Plugin 'troydm/easytree.vim'
   Plugin 'scrooloose/syntastic'
   Plugin 'tpope/vim-surround'
 
@@ -46,7 +45,6 @@
   Plugin 'altercation/vim-colors-solarized'
   Plugin 'w0ng/vim-hybrid'
   Plugin 'noahfrederick/vim-noctu'
-  Plugin 'noahfrederick/vim-hemisu'
 " -----------------------------------------------------------------------------
 
 
@@ -465,8 +463,7 @@
   " Plugins
   nnoremap <leader>b :CtrlPBuffer<CR>
   nnoremap <leader>T :CtrlPBufTag<CR>
-  nnoremap <leader>et :EasyTree<CR>
-  
+
   " Functions
   if exists("$TMUX")
     nnoremap <leader>c :call OpenDirInTmuxPane(expand('%:p:h'))<CR>
