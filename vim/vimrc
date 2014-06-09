@@ -315,7 +315,7 @@
   set list
 
   " The representation of non-printable characters #wtf
-  set listchars=nbsp:-,tab:¦\ ,extends:>,precedes:<,eol:¬
+  set listchars=nbsp:-,tab:¦\ ,extends:>,precedes:<,eol:¬,trail:·
 
   " Show line breaks
   set showbreak=>
