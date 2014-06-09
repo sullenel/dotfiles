@@ -25,11 +25,5 @@ if [[ -d "$HOME/.rbenv/bin" ]]; then
     source $HOME/.rbenv/completions/rbenv.zsh
 fi
 
-# nodenv
-if [[ -d "$HOME/.nodenv/bin" ]]; then
-    PATH="$HOME/.nodenv/bin:$PATH"
-    eval "$(nodenv init -)"
-fi
-
 # scripts
 [[ -d $HOME/.bin/ ]] && PATH="$HOME/.bin:$PATH"
