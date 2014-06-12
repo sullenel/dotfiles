@@ -40,8 +40,6 @@
 
   " Colorschemes
   Plugin 'tomasr/molokai'
-  Plugin 'sjl/badwolf'
-  Plugin 'altercation/vim-colors-solarized'
   Plugin 'w0ng/vim-hybrid'
   Plugin 'noahfrederick/vim-noctu'
 " -----------------------------------------------------------------------------
