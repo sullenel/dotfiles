@@ -15,11 +15,11 @@
 " PLUGINS
 " -----------------------------------------------------------------------------
   filetype off
-  set rtp+=~/.vim/bundle/vundle/
-  call vundle#rc()
+  set rtp+=~/.vim/bundle/Vundle.vim
+  call vundle#begin()
 
   " Actual plugins
-  Plugin 'gmarik/vundle'
+  Plugin 'gmarik/Vundle.vim'
   Plugin 'kien/ctrlp.vim'
   Plugin 'SirVer/ultisnips'
   Plugin 'junegunn/vim-easy-align'
@@ -42,6 +42,8 @@
   Plugin 'tomasr/molokai'
   Plugin 'w0ng/vim-hybrid'
   Plugin 'noahfrederick/vim-noctu'
+
+  call vundle#end()
 " -----------------------------------------------------------------------------
 
 
