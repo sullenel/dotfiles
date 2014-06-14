@@ -1,33 +1,33 @@
-snippet mod "Module"
+snippet mod "Module" b
 -module(`!p res = snip.basename`).
 endsnippet
 
 
-snippet exp "Export"
+snippet exp "Export" b
 -export([${1:function}/${2:arity}]).
 endsnippet
 
 
-snippet expa "Export all"
+snippet expa "Export all" b
 -compile(export_all).
 endsnippet
 
 
-snippet rec "Record"
+snippet rec "Record" b
 -record(${1:name}, {${2:field}${3: = ${4:value}}}).
 endsnippet
 
 
-snippet inc "Include"
+snippet inc "Include" b
 -include("${1:file}.hrl").
 endsnippet
 
 
-snippet def "Macro"
+snippet def "Macro" b
 -define(${1:Macro}, ${2:Replacement}).
 endsnippet
 
 
-snippet imp "Import"
+snippet imp "Import" b
 -import(${1:Module}, [${2:Function}/${3:Arity}]).
 endsnippet
