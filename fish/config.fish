@@ -31,7 +31,7 @@ setenv EDITOR "vim"
 setenv VISUAL $EDITOR
 
 # Terminal
-set -x TERM xterm-256color
+test -n $TMUX; and set -x TERM screen-256color; or set -x TERM xterm-256color
 
 
 # -----------------------------------------------------------------------------
