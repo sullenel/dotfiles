@@ -10,13 +10,13 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Font
-  set guifont=Consolas\ 13
+  set guifont=Inconsolata\ XL\ Medium\ 11
 
   " Add some space between rows
   set linespace=1
 
   " Colorscheme
-  colorscheme molokai
+  colorscheme hybrid
 " -----------------------------------------------------------------------------
 
 
