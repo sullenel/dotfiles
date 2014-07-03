@@ -408,8 +408,8 @@
   " No Ex-mode
   nnoremap Q <nop>
 
-  " Search for the word under the cursor
-  nnoremap K :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
+  " Don't search for the word under the cursor
+  nnoremap K <nop>
 
   " Tab to go to matching pair
   nnoremap <Tab> %
