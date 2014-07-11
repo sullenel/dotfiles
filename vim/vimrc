@@ -42,6 +42,7 @@
   Plugin 'tomasr/molokai'
   Plugin 'w0ng/vim-hybrid'
   Plugin 'noahfrederick/vim-noctu'
+  Plugin 'morhetz/gruvbox'
 
   call vundle#end()
 " -----------------------------------------------------------------------------
