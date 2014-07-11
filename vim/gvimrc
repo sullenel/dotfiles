@@ -16,7 +16,7 @@
   set linespace=1
 
   " Colorscheme
-  colorscheme hybrid
+  colorscheme gruvbox
 " -----------------------------------------------------------------------------
 
 
