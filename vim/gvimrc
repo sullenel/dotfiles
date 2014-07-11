@@ -10,10 +10,7 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Font
-  set guifont=Inconsolata\ XL\ Medium\ 11
-
-  " Add some space between rows
-  set linespace=1
+  set guifont=monoOne\ 12
 
   " Colorscheme
   colorscheme gruvbox
