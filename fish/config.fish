@@ -39,33 +39,3 @@ set -U VISUAL $EDITOR
 
 # Terminal
 test $TMUX; and set -x TERM screen-256color; or set -x TERM xterm-256color
-
-
-# -----------------------------------------------------------------------------
-# PROMPTS
-# -----------------------------------------------------------------------------
-# LPrompt
-function fish_prompt
-    function _last_two_dirs
-      if [ $PWD != $HOME ];
-        echo -n $PWD | awk -F\/ '{print $(NF-1),$(NF)}' | sed 's/ /\\//'
-      end
-    end
-
-    set -l red (set_color -o red)
-    set -l blue (set_color -o blue)
-    set -l normal (set_color normal)
-    set -l arrow "$red➜"
-    set -l cwd $blue(_last_two_dirs)
-
-    echo -n $cwd $arrow $normal
-end
-
-
-# RPrompt
-function fish_right_prompt
-    set -l white (set_color white)
-    set -l files $white(ls -A | wc -l)
-
-    echo -n -s $files
-end
