@@ -27,8 +27,8 @@ function fish_title;end
 status --is-interactive; and source (rbenv init -|psub)
 
 # Editor
-setenv EDITOR "vim"
-setenv VISUAL $EDITOR
+set -U EDITOR vim
+set -U VISUAL $EDITOR
 
 # Terminal
 test $TMUX; and set -x TERM screen-256color; or set -x TERM xterm-256color
