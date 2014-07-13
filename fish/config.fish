@@ -4,6 +4,16 @@
 # remove the greeting message
 set fish_greeting ""
 
+# don't copy to system clipboard
+set FISH_CLIPBOARD_CMD "cat"
+
+# remove weird output before each prompt
+function fish_title;end
+
+
+# -----------------------------------------------------------------------------
+# COLOURS
+# -----------------------------------------------------------------------------
 # set the colour of autocompletions
 set fish_color_autosuggestion yellow
 
@@ -13,11 +23,8 @@ set fish_color_command blue --bold
 # set the colour for comments
 set fish_color_comment magenta
 
-# don't copy to system clipboard
-set FISH_CLIPBOARD_CMD "cat"
-
-# remove weird output before each prompt
-function fish_title;end
+# set the colour for search matches
+set fish_color_search_match normal
 
 
 # -----------------------------------------------------------------------------
