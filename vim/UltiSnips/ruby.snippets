@@ -1,36 +1,33 @@
-snippet ic "Include" !b
-include $0
+snippet ic "Include" b
+include ${1:module}
 endsnippet
 
 
-snippet et "Extend" !b
-extend ${1:self}
-endsnippet
-
-
-snippet req "Require" !b
+snippet req "Require" b
 require '$0'
 endsnippet
 
 
-snippet rr "Require relative" !b
+snippet rr "Require relative" b
 require_relative '$0'
 endsnippet
 
 
-snippet de "Do/end block" !w
+snippet do "Do block" w
 do
+  $0
 end
 endsnippet
 
 
-snippet mm "method_missing" !b
-def method_missing($0)
+snippet mm "method_missing" b
+def method_missing(${1:name}, ${2:*args}, ${3:&block})
+  $0
 end
 endsnippet
 
 
-snippet bg "block_given?" !w
+snippet bg "block_given?" w
 block_given?
 endsnippet
 
@@ -51,19 +48,19 @@ endsnippet
 
 
 # RSpec Snippets
-snippet it "RSpec 'it'" !b
+snippet it "RSpec 'it'" b
 it "should ${1:description}" do
   $0
 end
 endsnippet
 
 
-snippet i "RSpec inline 'it'" !b
+snippet i "RSpec inline 'it'" b
 it { should $0 }
 endsnippet
 
 
-snippet des "RSpec 'describe'" !b
+snippet des "RSpec 'describe'" b
 describe ${1:subject} do
   $0
 end
@@ -83,10 +80,17 @@ endsnippet
 
 
 snippet let "RSpec 'let'" !b
-let(:$1) { $0 }
+let(:${1:name}) do
+  $0
+end
 endsnippet
 
 
-snippet e "RSpec inline 'expect'" !b
+snippet l "RSpec inline 'let'" b
+let(:${1:name}) { $0 }
+endsnippet
+
+
+snippet e "RSpec inline 'expect'" b
 expect { $0 }
 endsnippet
