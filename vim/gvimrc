@@ -10,10 +10,10 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Font
-  set guifont=monoOne\ 12
+  set guifont=Sudo\ 14
 
   " Colorscheme
-  colorscheme gruvbox
+  colorscheme random
 " -----------------------------------------------------------------------------
 
 
