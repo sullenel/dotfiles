@@ -1,5 +1,5 @@
 ReadTags = yes
-MusicDir = /home/el/music
+MusicDir = /home/el/Music
 StartInMusicDir = no
 Sort = FileName
 ShowStreamErrors = yes
@@ -37,4 +37,4 @@ Layout3 = ""
 FollowPlayedFile = yes
 SetXtermTitle = yes
 ModPlug_Surround = yes
-OnSongChange = /home/el/.bin/sh/moc_notify
+OnSongChange = "/home/el/.moc/moc_notify %a %t"
