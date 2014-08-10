@@ -43,6 +43,7 @@
   Plugin 'w0ng/vim-hybrid'
   Plugin 'noahfrederick/vim-noctu'
   Plugin 'morhetz/gruvbox'
+  Plugin 'daddye/soda.vim'
 
   call vundle#end()
 " -----------------------------------------------------------------------------
