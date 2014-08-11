@@ -270,6 +270,11 @@
   " Show unprintable characters as hex numbers instead of ^/~C characters
   set display+=uhex
 
+  " Set term
+  if !has("gui_running")
+    set term=xterm-256color
+  end
+
   " Clear the background colour
   if &term =~ '256color'
     set t_ut=
