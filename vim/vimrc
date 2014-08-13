@@ -28,6 +28,7 @@
   Plugin 'bling/vim-airline'
   Plugin 'scrooloose/syntastic'
   Plugin 'tpope/vim-surround'
+  Plugin 'majutsushi/tagbar'
 
   " Syntax
   Plugin 'aliva/vim-fish'
@@ -70,6 +71,12 @@
 
   " Airline: enable syntastic integration
   let g:airline#extensions#syntastic#enabled = 1
+
+  " Airline: enable tagbar integration
+  let g:airline#extensions#tagbar#enabled = 1
+
+  " Tagbar: don't sort the tags
+  let g:tagbar_sort = 0
 
   " CtrlP: custom ignore patterns
   let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn|bzr)|node_modules)$'
@@ -453,6 +460,7 @@
 
   " Plugins
   nnoremap <leader>b :CtrlPBuffer<CR>
+  nnoremap <leader>t :TagbarToggle<CR>
 
   " Functions
   if exists("$TMUX")
