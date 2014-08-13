@@ -23,7 +23,6 @@
   Plugin 'kien/ctrlp.vim'
   Plugin 'SirVer/ultisnips'
   Plugin 'junegunn/vim-easy-align'
-  Plugin 'dhruvasagar/vim-table-mode'
   Plugin 'mattn/emmet-vim'
   Plugin 'tpope/vim-commentary'
   Plugin 'bling/vim-airline'
