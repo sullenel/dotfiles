@@ -453,7 +453,6 @@
 
   " Plugins
   nnoremap <leader>b :CtrlPBuffer<CR>
-  nnoremap <leader>T :CtrlPBufTag<CR>
 
   " Functions
   if exists("$TMUX")
