@@ -446,10 +446,6 @@
   nnoremap <leader>O O<esc>k<CR>
   nnoremap <leader>w :w!<CR>
 
-  " Tabs
-  nnoremap <leader>te :tabedit 
-  nnoremap <silent> <leader>tn :tabnew<CR>
-
   " Buffers
   nnoremap <leader>d :bdelete<CR>
   nnoremap <leader>> :bnext<CR>
