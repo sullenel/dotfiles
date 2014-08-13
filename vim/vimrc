@@ -429,6 +429,8 @@
   nnoremap N Nzz
   nnoremap Y y$
   nnoremap <leader>y "+y
+  nnoremap <leader>p "+p
+  nnoremap <leader>P "+P
 
   " Navigation
   nnoremap <C-h> <C-w>h
@@ -498,6 +500,8 @@
   vnoremap < <gv
   vnoremap > >gv
   vnoremap <leader>y "+y
+  vnoremap <leader>p "+p
+  vnoremap <leader>P "+P
   vnoremap <Tab> >gv
   vnoremap <S-Tab> <gv
 
