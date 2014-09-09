@@ -16,7 +16,7 @@ hi CursorLine ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#303030 gui=N
 hi CursorColumn ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#303030 gui=NONE
 hi ColorColumn ctermfg=NONE ctermbg=236 cterm=NONE guifg=NONE guibg=#303030 gui=NONE
 hi LineNr ctermfg=245 ctermbg=236 cterm=NONE guifg=#8c8c8c guibg=#303030 gui=NONE
-hi VertSplit ctermfg=240 ctermbg=240 cterm=NONE guifg=#5c5c5c guibg=#5c5c5c gui=NONE
+hi VertSplit ctermfg=240 ctermbg=NONE cterm=NONE guifg=#5c5c5c guibg=NONE gui=NONE
 hi MatchParen ctermfg=15 ctermbg=NONE cterm=underline guifg=#ffffff guibg=NONE gui=underline
 hi StatusLine ctermfg=15 ctermbg=240 cterm=bold guifg=#ffffff guibg=#5c5c5c gui=bold
 hi StatusLineNC ctermfg=15 ctermbg=240 cterm=NONE guifg=#ffffff guibg=#5c5c5c gui=NONE
