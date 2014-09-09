@@ -45,7 +45,4 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
-# Run systemd as a user instance
-systemd --user &
-
 exec openbox-session
