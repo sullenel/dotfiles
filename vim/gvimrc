@@ -10,10 +10,7 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Font
-  set guifont=Sudo\ 14
-
-  " Colorscheme
-  colorscheme random
+  set guifont=AnonymousPro\ Bold\ 11
 " -----------------------------------------------------------------------------
 
 

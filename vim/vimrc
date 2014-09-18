@@ -248,7 +248,7 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Set the colorscheme
-  colorscheme Ciapre
+  colorscheme nodejs
 
   " Minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
