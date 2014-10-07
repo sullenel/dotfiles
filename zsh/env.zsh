@@ -27,3 +27,10 @@ fi
 
 # scripts
 [[ -d $HOME/.bin/ ]] && PATH="$HOME/.bin:$PATH"
+
+# npm
+NPM_PACKAGES="${HOME}/.npm-packages"
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin:$PATH"
+unset MANPATH
+MANPATH="$NPM_PACKAGES/share/man:$(manpath)"

@@ -1,2 +1,3 @@
 loglevel=warn
 python=python2
+prefix=${HOME}/.npm-packages
