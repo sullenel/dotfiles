@@ -1,1 +1,2 @@
-loglevel = warn
+loglevel=warn
+python=python2
