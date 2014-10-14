@@ -248,7 +248,8 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Set the colorscheme
-  colorscheme nodejs
+  let g:hybrid_use_Xresources = 1
+  colorscheme hybrid
 
   " Minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
