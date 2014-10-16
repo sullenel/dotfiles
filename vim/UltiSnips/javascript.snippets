@@ -13,15 +13,52 @@ var $1 = require('${2:$1}');
 endsnippet
 
 
-snippet fun "function" b
+snippet fun "function" w
 function ${1:name}(${2:args}) {
   $3
 }
 endsnippet
 
 
-snippet af "anonymous function" i
-function(${1:args}) {
-  $2
-}
+snippet ex "exports" b
+exports.${1:name} = $0;
+endsnippet
+
+
+snippet me "module.exports" b
+module.exports = $0;
+endsnippet
+
+
+# Testing
+snippet des "describe" b
+describe('${1:subject}', function() {
+  $0
+});
+endsnippet
+
+
+snippet it "it" b
+it('should ${1:do ...}', function(${2:done}) {
+  $0
+});
+endsnippet
+
+
+snippet pit "it (pending)" b
+it('should ${1:do...}');
+endsnippet
+
+
+snippet be "before(Each)" b
+before${1:Each}(function(${2:done}) {
+  $0
+});
+endsnippet
+
+
+snippet af "after(Each)" b
+after${1:Each}(function(${2:done}) {
+  $0
+});
 endsnippet
