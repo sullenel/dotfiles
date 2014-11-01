@@ -40,7 +40,6 @@
   Plug 'w0ng/vim-hybrid'
   Plug 'noahfrederick/vim-noctu'
   Plug 'morhetz/gruvbox'
-  Plug 'daddye/soda.vim'
 
   call plug#end()
 " -----------------------------------------------------------------------------
