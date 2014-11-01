@@ -34,6 +34,7 @@
   Plug 'sunaku/vim-ruby-minitest', { 'for': 'ruby' }
   Plug 'tpope/vim-haml', { 'for': 'haml' }
   Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
+  Plug 'urso/haskell_syntax.vim'
 
   " Colorschemes
   Plug 'tomasr/molokai'
