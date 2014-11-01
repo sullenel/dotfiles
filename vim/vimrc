@@ -40,6 +40,7 @@
   Plug 'w0ng/vim-hybrid'
   Plug 'noahfrederick/vim-noctu'
   Plug 'morhetz/gruvbox'
+  Plug 'reedes/vim-colors-pencil'
 
   call plug#end()
 " -----------------------------------------------------------------------------
