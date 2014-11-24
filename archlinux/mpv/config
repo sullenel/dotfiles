@@ -2,7 +2,7 @@
 ao=alsa
 softvol=no
 gapless-audio=yes
-no-cache=yes
+cache=no
 
 # Video Settings
 sub-text-font="Ubuntu Regular"
