@@ -15,9 +15,6 @@ export VISUAL=$EDITOR
 # Browser
 export BROWSER="chromium"
 
-# Grep
-export GREP_OPTIONS="--color=auto --exclude=*.pyc --exclude-dir=.git"
-
 # rbenv
 if [[ -d "$HOME/.rbenv/bin" ]]; then
     PATH="$HOME/.rbenv/bin:$PATH"
