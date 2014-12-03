@@ -50,6 +50,9 @@ if [[ -d "$HOME/.rbenv" ]]; then
     source $HOME/.rbenv/completions/rbenv.bash
 fi
 
+# scripts
+[[ -d $HOME/.bin/ ]] && PATH="$HOME/.bin:$PATH"
+
 
 # -----------------------------------------------------------------------------
 # ALIASES
