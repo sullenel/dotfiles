@@ -63,9 +63,11 @@ alias lr="ls -R"
 alias lx="ll -BX" # extension
 alias lz="ll -rS" # size
 alias lt="ll -rt" # date
+
 alias ".."="cd ../"
 alias "..."="cd ../../"
 alias "...."="cd ../../../"
+
 alias dir="dir --color=auto"
 alias grep="grep --color=auto"
 alias cp="cp -iv"
@@ -76,11 +78,13 @@ alias ln="ln -i"
 alias df="df -h"
 alias du="du -h"
 alias free="free -h"
+alias tree="tree -hF"
 alias diff="colordiff"
 alias h="history"
+alias j="jobs -l"
+
 alias v="vim"
-alias cltr="rm -rf ~/.local/share/Trash/"
-alias today="date '+%A, %B %d, %Y [%T]'"
+alias now="date '+%B %d, %Y [%A] [%l:%M %p]'"
 alias hgrep="history | grep $1"
 alias ports="netstat -tulpn"
 alias hfill="hsetroot -fill"
@@ -88,9 +92,18 @@ alias htile="hsetroot -tile"
 alias fping="ping -c 5 -n -i 0.2 -W1"
 alias ftraceroute="traceroute -n -w 3 -q 1"
 alias myip="wget -O - -q icanhazip.com"
+alias pyson="python -mjson.tool"
+
+# Linux Specific
+if [[ $OSTYPE = 'linux-gnu' ]]; then
+    alias xcopy="xclip -selection clipboard"
+    alias xpaste="xclip -selection clipboard -out"
+    alias cltr="rm -rf ~/.local/share/Trash/"
+fi
 
 # Arch Linux specific
 if [[ -f /etc/arch-release ]]; then
+    alias webcam="mpv -vf mirror -fps 15 tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0"
     alias reboot="systemctl reboot"
     alias poweroff="systemctl poweroff"
     alias halt="systemctl halt"
