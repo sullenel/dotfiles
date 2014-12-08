@@ -249,8 +249,8 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Set the colorscheme
-  let g:hybrid_use_Xresources = 1
-  colorscheme hybrid
+  set bg=dark
+  colorscheme pencil
 
   " Minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
