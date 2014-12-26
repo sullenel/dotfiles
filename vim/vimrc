@@ -135,7 +135,7 @@
   set nobomb
 
   " Set the encryption method
-  set cryptmethod=blowfish
+  set cryptmethod=blowfish2
 
   " Set the behavior when switching between buffers
   set switchbuf=useopen,usetab
