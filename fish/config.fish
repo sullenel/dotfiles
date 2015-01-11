@@ -30,9 +30,6 @@ set fish_color_search_match normal
 # -----------------------------------------------------------------------------
 # VARIABLES
 # -----------------------------------------------------------------------------
-# rbenv
-status --is-interactive; and source (rbenv init -|psub)
-
 # Editor
 set -U EDITOR vim
 set -U VISUAL $EDITOR
