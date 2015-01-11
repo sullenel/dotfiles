@@ -1,0 +1,29 @@
+# Editor
+export EDITOR="vim"
+export VISUAL=$EDITOR
+
+
+# rbenv
+if [[ -d $HOME/.rbenv/bin ]]; then
+    PATH="$HOME/.rbenv/bin:$PATH"
+    eval "$(rbenv init -)"
+fi
+
+
+# Rython
+[[ -f $HOME/.pyrc ]] && export PYTHONSTARTUP=$HOME/.pyrc
+
+
+# npm
+if [[ -d $HOME/.npm-packages/bin ]]; then
+  PATH="$HOME/.npm-packages/bin:$PATH"
+  NODE_PATH="$HOME/.npm-packages/lib/node_modules"
+fi
+
+
+# Scripts
+[[ -d $HOME/.bin ]] && PATH="$PATH:$HOME/.bin"
+
+
+# Source ~/.bashrc
+[[ -f $HOME/.bashrc ]] && source $HOME/.bashrc

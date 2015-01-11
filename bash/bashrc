@@ -33,32 +33,11 @@ shopt -s extglob
 # Prompt
 export PS1="\[\e[1;90m\]→ \W\[\e[0;31m\] $ \[\e[0m\]"
 
-# Editor
-export EDITOR="vim"
-export VISUAL=$EDITOR
 
-# Browser
-export BROWSER="chromium"
-
-# Python
-export PYTHONSTARTUP="$HOME/.pyrc"
-
-# rbenv
-if [[ -d "$HOME/.rbenv" ]]; then
-    export PATH="$HOME/.rbenv/bin:$PATH"
-    eval "$(rbenv init - bash)"
-    source $HOME/.rbenv/completions/rbenv.bash
-fi
-
-# scripts
-[[ -d $HOME/.bin/ ]] && PATH="$HOME/.bin:$PATH"
-
-# npm
-NPM_PACKAGES="${HOME}/.npm-packages"
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:$PATH"
-unset MANPATH
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+# -----------------------------------------------------------------------------
+# COMPLETIONS
+# -----------------------------------------------------------------------------
+[[ -f $HOME/.rbenv/completions/rbenv.bash ]] && source $HOME/.rbenv/completions/rbenv.bash
 
 
 # -----------------------------------------------------------------------------
