@@ -24,7 +24,7 @@
   Plug 'bling/vim-airline'
   Plug 'scrooloose/syntastic'
   Plug 'tpope/vim-surround'
-  Plug 'mattn/emmet-vim', { 'for': [ 'html', 'css' ] }
+  Plug 'mattn/emmet-vim'
   Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
 
   " Syntax
