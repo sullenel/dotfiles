@@ -1,0 +1,53 @@
+snippet ex "extends" b
+{% extends "${1:parent}${2:.html}" %}
+endsnippet
+
+
+snippet bl "block"
+{% block ${1:name} %}$2{% endblock %}
+endsnippet
+
+
+snippet if "if" w
+{% if ${1:conditional} %}$2{% endif %}
+endsnippet
+
+
+snippet ife "if-else" w
+{% if ${1:conditional} %}$2{% else %}$3{% endif %}
+endsnippet
+
+
+snippet fi "filter" w
+{% filter ${1:filter} %}$2{% endfilter %}
+endsnippet
+
+
+snippet im "import" b
+{% import "${1:file}${2:.html}" as ${3:varname} %}
+endsnippet
+
+
+snippet inc "include" w
+{% include "${1:file}${2:.html}" %}
+endsnippet
+
+
+snippet set "set"
+{% set ${1:varname} ${2:=} ${3:value} %}
+endsnippet
+
+
+snippet t "tag" w
+{% ${1:tag} %}
+endsnippet
+
+
+snippet v "variable" w
+{{ ${1:variable} }}
+endsnippet
+
+
+snippet # "comment" w
+{# ${1:comment} #}
+endsnippet
