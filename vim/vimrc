@@ -65,7 +65,7 @@
   let g:airline#extensions#csv#enabled = 0
 
   " Airline: disable whitespace detection
-  let g:airline_detect_whitespace = 0
+  let g:airline#extensions#whitespace#enabled = 0
 
   " Airline: enable syntastic integration
   let g:airline#extensions#syntastic#enabled = 1
