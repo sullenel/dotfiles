@@ -10,8 +10,8 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Font
-  set guifont=Fira\ Mono\ Medium\ 9
-  set linespace=0
+  set guifont=Sudo\ 12
+  colorscheme hybrid
 " -----------------------------------------------------------------------------
 
 
