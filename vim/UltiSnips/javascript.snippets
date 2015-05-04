@@ -14,7 +14,7 @@ endsnippet
 
 
 snippet req "require" b
-var $1 = require('${2:$1}');
+const $1 = require('${2:$1}');
 endsnippet
 
 
@@ -73,4 +73,11 @@ snippet fof "for...of" b
 for (let ${1:variable} of ${2:object}) {
   $0
 }
+endsnippet
+
+
+snippet iife "immediately invoked function expression" b
+(function$1(${2:args}) {
+  $3
+})(${4:$2});
 endsnippet
