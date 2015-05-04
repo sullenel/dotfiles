@@ -11,11 +11,13 @@
 [help]
         autocorrect = 1
 [alias]
-        pl = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        pl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
         st = status
         rb = rebase
         ci = commit
         co = checkout
+	cob = checkout -b
+	dw = diff --word-diff`
 [merge]
         tool = vimdiff
 [push]
