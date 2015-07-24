@@ -1,3 +1,6 @@
 loglevel=warn
 python=python2
 prefix=${HOME}/.npm-packages
+init.author.name=sullenel
+init.license=MIT
+init.version=0.1.0
