@@ -78,23 +78,19 @@ alias ports="netstat -tulpn"
 alias fping="ping -c 5 -n -i 0.2 -W1"
 alias ftraceroute="traceroute -n -w 3 -q 1"
 alias myip="wget -O - -q icanhazip.com"
-alias pyson="python -mjson.tool"
-
-# Linux Specific
-if [[ $OSTYPE = 'linux-gnu' ]]; then
-    alias xcopy="xclip -selection clipboard"
-    alias xpaste="xclip -selection clipboard -out"
-    alias cltr="rm -rf ~/.local/share/Trash/"
-fi
+alias xcopy="xclip -selection clipboard"
+alias xpaste="xclip -selection clipboard -out"
+alias nvim="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 
 # Arch Linux specific
 if [[ -f /etc/arch-release ]]; then
+    alias cltr="rm -rf ~/.local/share/Trash/"
     alias webcam="mpv -vf mirror -fps 15 tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0"
     alias reboot="systemctl reboot"
     alias poweroff="systemctl poweroff"
     alias halt="systemctl halt"
     alias suspnd="systemctl suspend"
-    alias yolo="packer -Syyu"
+    alias yolo="apacman -Syyu"
 fi
 
 
@@ -107,11 +103,7 @@ mkcd() {
     cd "$1"
 }
 
-# Convert a man page to a pdf file
-man2pdf() {
-    if [ $# -eq 0 ]; then
-        echo "Usage: man2pdf <command>"
-    else
-        man -t $1 | ps2pdf - > ${1}.pdf
-    fi
+tm() {
+  local session="${1:-dev}"
+  tmux attach-session -t $session || tmux new-session -s $session
 }
