@@ -14,7 +14,10 @@ fi
 [[ -f $HOME/.pyrc ]] && export PYTHONSTARTUP=$HOME/.pyrc
 
 
-# npm
+# Node.js
+export NODE_REPL_HISTORY_FILE="${HOME}/.node_history"
+export NODE_REPL_HISTORY_SIZE=5000
+
 if [[ -d $HOME/.npm-packages/bin ]]; then
   PATH="$HOME/.npm-packages/bin:$PATH"
   NODE_PATH="$HOME/.npm-packages/lib/node_modules"
