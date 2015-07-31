@@ -42,7 +42,6 @@
   Plug 'noahfrederick/vim-noctu'
   Plug 'morhetz/gruvbox'
   Plug 'reedes/vim-colors-pencil'
-  Plug 'yamafaktory/lumberjack.vim'
 
   call plug#end()
 " -----------------------------------------------------------------------------
@@ -250,7 +249,7 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Set the colorscheme
-  colorscheme lumberjack
+  colorscheme hybrid
 
   " Minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
