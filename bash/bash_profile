@@ -15,7 +15,6 @@ fi
 
 
 # Node.js
-export NODE_REPL_HISTORY_FILE="${HOME}/.node_history"
 export NODE_REPL_HISTORY_SIZE=5000
 
 if [[ -d $HOME/.npm-packages/bin ]]; then
