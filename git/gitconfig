@@ -16,9 +16,14 @@
         rb = rebase
         ci = commit
         co = checkout
-	cob = checkout -b
-	dw = diff --word-diff`
+        cob = checkout -b
+        dw = diff --word-diff
+        dt = difftool
 [merge]
         tool = vimdiff
 [push]
-	default = simple
+        default = simple
+[diff]
+        tool = vimdiff
+[difftool]
+        prompt = false
