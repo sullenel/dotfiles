@@ -11,3 +11,11 @@ osd-font-size=20
 
 # Other settings
 slang=en
+
+# Screenshots
+screenshot-format=png
+screenshot-template="%n"
+screenshot-directory=
+
+[pseudo-gui]
+screenshot-directory=
