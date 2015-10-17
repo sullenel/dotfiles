@@ -29,10 +29,7 @@
 
   " Syntax
   Plug 'aliva/vim-fish', { 'for': 'fish' }
-  Plug 'Keithbsmiley/rspec.vim', { 'for': 'ruby' }
   Plug 'peterhoeg/vim-qml', { 'for': 'qml' }
-  Plug 'sunaku/vim-ruby-minitest', { 'for': 'ruby' }
-  Plug 'tpope/vim-haml', { 'for': 'haml' }
   Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
   Plug 'urso/haskell_syntax.vim'
 
@@ -485,9 +482,6 @@
 
   " Hash rocket
   inoremap <C-l> <Space>=><Space>
-
-  " TODO: figure out what it does
-  inoremap <CR> <C-G>u<CR>
 " -----------------------------------------------------------------------------
 
 
