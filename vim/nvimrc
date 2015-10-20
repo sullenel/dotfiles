@@ -84,10 +84,6 @@
 
   " Vimerl: don't replace the content of the current buffer when loading a code skeleton
   let erlang_skel_replace = 0
-
-  " Don't highlight parenthesis
-  " let g:loaded_matchparen = 1
-  " let loaded_matchparen = 1
 " -----------------------------------------------------------------------------
 
 
