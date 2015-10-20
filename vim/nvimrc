@@ -1,0 +1,514 @@
+" -----------------------------------------------------------------------------
+" PLUGINS
+" -----------------------------------------------------------------------------
+  call plug#begin('~/.nvim/plugged')
+
+  " Actual plugins
+  Plug 'kien/ctrlp.vim'
+  Plug 'SirVer/ultisnips'
+  Plug 'junegunn/vim-easy-align'
+  Plug 'tpope/vim-commentary'
+  Plug 'bling/vim-airline'
+  Plug 'scrooloose/syntastic'
+  Plug 'tpope/vim-surround'
+  Plug 'tpope/vim-speeddating'
+  Plug 'mattn/emmet-vim'
+  Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+  Plug 'airblade/vim-gitgutter'
+
+  " Syntax
+  Plug 'aliva/vim-fish', { 'for': 'fish' }
+  Plug 'peterhoeg/vim-qml', { 'for': 'qml' }
+  Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
+  Plug 'urso/haskell_syntax.vim', { 'for': 'haskell' }
+  Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+  Plug 'othree/yajs.vim', { 'for': 'javascript' }
+  Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+
+  " Colorschemes
+  Plug 'tomasr/molokai'
+  Plug 'w0ng/vim-hybrid'
+  Plug 'morhetz/gruvbox'
+  Plug 'reedes/vim-colors-pencil'
+  Plug 'altercation/vim-colors-solarized'
+  Plug 'blueshirts/darcula'
+  Plug 'chriskempson/base16-vim'
+  Plug 'jdkanani/vim-material-theme'
+
+  call plug#end()
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" SETTINGS FOR PLUGINS
+" -----------------------------------------------------------------------------
+  " Airline: theme
+  let g:airline_theme = "gruvbox"
+
+  " Airline: enable paste detection
+  let g:airline_detect_paste = 1
+
+  " Airline: remove left and right separators
+  let g:airline_left_sep = ""
+  let g:airline_right_sep = ""
+
+  " Airline: disable CSV integration
+  let g:airline#extensions#csv#enabled = 0
+
+  " Airline: disable whitespace detection
+  let g:airline#extensions#whitespace#enabled = 0
+
+  " Airline: enable syntastic integration
+  let g:airline#extensions#syntastic#enabled = 1
+
+  " Airline: disable tagbar integration
+  let g:airline#extensions#tagbar#enabled = 0
+
+  " Tagbar: don't sort the tags
+  let g:tagbar_sort = 0
+
+  " CtrlP: custom ignore patterns
+  let g:ctrlp_custom_ignore = "\v[\/](\.(git|hg|svn|bzr)|node_modules)$"
+
+  " CtrlP: disable caching
+  let g:ctrlp_use_caching = 0
+
+  " UltiSnips: define the keys for triggering UltiSnips actions
+  let g:UltiSnipsExpandTrigger = "<tab>"
+  let g:UltiSnipsJumpForwardTrigger = "<tab>"
+  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+
+  " UltiSnips: edit snippets in a vertical window
+  let g:UltiSnipsEditSplit = "vertical"
+
+  " Vimerl: don't replace the content of the current buffer when loading a code skeleton
+  let erlang_skel_replace = 0
+
+  " Don't highlight parenthesis
+  " let g:loaded_matchparen = 1
+  " let loaded_matchparen = 1
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" FILES. BUFFERS.
+" -----------------------------------------------------------------------------
+  " Enable syntax highlighting
+  if &t_Co > 2 || has("gui_running")
+    syntax on
+  endif
+
+  " Enable filetype detecting
+  filetype on
+
+  " Load the plugin files for specific filetypes
+  filetype plugin on
+
+  " Load the indent file for specific filetypes
+  filetype indent on
+
+  " Automatically write changes to the file
+  set autowrite
+
+  " Hide buffers instead of closing them
+  set hidden
+
+  " Don't prepend a BOM to the file
+  set nobomb
+
+  " Set the behavior when switching between buffers
+  set switchbuf=useopen,usetab
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" BACKUP. HISTORY. UNDO.
+" -----------------------------------------------------------------------------
+  " Don't leave a backup after the file has been successfully written #YOLO
+  set nobackup
+
+  " Don't make a backup before overwriting a file #YOLO
+  set nowritebackup
+
+  " Don't use a swapfile for the buffer #YOLO
+  set noswapfile
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" GENERAL
+" -----------------------------------------------------------------------------
+  " The cursor can be moved wherever we want (in Visual block mode)
+  set virtualedit=block
+
+  " Completion mode for 'wildmenu'
+  set wildmode=list:longest,full
+
+  " Ignore case when completing file names
+  set wildignorecase
+
+  " A list of file patterns to be ignored
+  set wildignore=*.obj
+  set wildignore+=*.pyc
+  set wildignore+=__pycache__/*
+  set wildignore+=*.class
+  set wildignore+=*.png
+  set wildignore+=*.jpg
+  set wildignore+=*.jpeg
+  set wildignore+=*.gif
+  set wildignore+=*~
+  set wildignore+=.git/*
+  set wildignore+=.hg/*
+  set wildignore+=.svn/*
+  set wildignore+=Gemfile.lock
+  set wildignore+=*.gem
+  set wildignore+=*.db
+  set wildignore+=node_modules/*
+
+  " Define how automatic formatting is to be done
+  if has("autocmd")
+    autocmd FileType * setlocal formatoptions-=cro
+  end
+
+  " Enable mouse support in visual mode
+  set mouse=v
+
+  " Don't redraw the screen while executing macros, registers, etc. that haven't been typed
+  set lazyredraw
+
+  " Set the shell to 'bash' if the current one is set to 'fish'
+  if &shell =~ 'fish'
+    set shell=bash
+  endif
+
+  " Less annoying messages
+  set shortmess+=aoOtTI
+
+  " Timeout on key codes
+  set notimeout
+  set ttimeout
+  set ttimeoutlen=10
+
+  " Case insensitivity in autocompletion
+  set infercase
+
+  " Insert mode completion options
+  set completeopt=longest,menu
+
+  " Open all folds
+  set nofoldenable
+
+  " Start diff mode with vertical splits
+  set diffopt+=vertical
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" APPEARANCE
+" -----------------------------------------------------------------------------
+  " Set the colorscheme
+  set background=dark
+  colorscheme gruvbox
+
+  " Minimal number of screen lines to keep above and below the cursor
+  set scrolloff=3
+
+  " Minimal number of columns for the current window
+  set winwidth=85
+
+  " Put the new window right of the current one
+  set splitright
+
+  " Put the new window below the current one
+  set splitbelow
+
+  " Vertical ruler (sort of)
+  if exists('+colorcolumn')
+    set colorcolumn=80
+  endif
+
+  " Vertical separators
+  set fillchars+=vert:\¦
+
+  " Show unprintable characters as hex numbers instead of ^/~C characters
+  set display+=uhex
+
+  " Clear the background colour
+  if &term =~ '256color'
+    set t_ut=
+  end
+
+  " Highlight the current line
+  set cursorline
+
+  " Show command in the last line of the screen
+  set showcmd
+
+  " Show the current mode in the status line
+  set showmode
+
+  " Show matching brackets
+  set showmatch
+
+  " Show line numbers
+  set number
+
+  " Number of columns to use for the line number
+  set numberwidth=5
+
+  " Show the line and column number of the cursor position
+  set ruler
+
+  " Show title as defined in 'titlestring'
+  set title
+
+  " Set the content of the 'title'
+  set titlestring=%n\ -\ %t\ [%F]
+
+  " Display non-printable characters
+  set list
+
+  " The representation of non-printable characters #wtf
+  set listchars=nbsp:-,tab:¦\ ,extends:>,precedes:<,trail:·
+
+  " Show line breaks
+  set showbreak=>
+
+  " Show the status line
+  set laststatus=2
+
+  " Status line format
+  set statusline=[%n]
+  set statusline+=%h
+  set statusline+=%r
+  set statusline+=[%f]
+  set statusline+=%=
+  set statusline+=[%L]
+  set statusline+=[%l:%c]
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" INDENTATION
+" -----------------------------------------------------------------------------
+  " Number of spaces to use for each step of indent (<<, >>, etc.)
+  set shiftwidth=2
+
+  " Use spaces in place of tab characters
+  set expandtab
+
+  " Round indent to multiple of 'shiftwidth' #wtf
+  set shiftround
+
+  " Copy the structure of the existing lines indent
+  set copyindent
+
+  " Wrap lines
+  set wrap
+
+  " Break lines on words
+  set linebreak
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" SEARCH
+" -----------------------------------------------------------------------------
+  " Ignore case in search patterns
+  set ignorecase
+
+  " Override 'ignorecase' if the search pattern contains upper case chars
+  set smartcase
+
+  " Turn off search highlighting in insert mode
+  if has("autocmd")
+    autocmd InsertEnter * :setlocal nohlsearch
+  endif
+
+  " Search using 'the silver searcher' (ag)
+  if executable("ag")
+    set grepprg=ag\ --nogroup\ --nocolor
+  endif
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" KEY BINDINGS
+" -----------------------------------------------------------------------------
+  set pastetoggle=<F2>
+  let mapleader = ","
+  let maplocalleader = "\\"
+
+
+  " ---------------------------------------------------------------------------
+  " ALL MODES
+  " ---------------------------------------------------------------------------
+  " Don't search for the word under the cursor
+  noremap K <nop>
+
+
+  " ---------------------------------------------------------------------------
+  " NORMAL MODE
+  " ---------------------------------------------------------------------------
+  " Use arrow keys for search navigation
+  nnoremap <silent> <up> :cpfile<CR>
+  nnoremap <silent> <down> :cnfile<CR>
+  nnoremap <silent> <right> :cnext<CR>
+  nnoremap <silent> <left> :cprev<CR>
+
+  " No Ex-mode
+  nnoremap Q <nop>
+
+  " Tab to go to matching pair
+  nnoremap <Tab> %
+
+  nnoremap j gj
+  nnoremap k gk
+  nnoremap \ ,
+  nnoremap n nzz
+  nnoremap N Nzz
+  nnoremap Y y$
+  nnoremap <leader>y "+y
+  nnoremap <leader>p "+p
+  nnoremap <leader>P "+P
+
+  " Navigation
+  nnoremap <C-h> <C-w>h
+  nnoremap <C-j> <C-w>j
+  nnoremap <C-k> <C-w>k
+  nnoremap <C-l> <C-w>l
+
+  " Miscellaneous
+  nnoremap <Space> :
+  nnoremap <leader><Space> :!
+  nnoremap <leader>sv :source $MYVIMRC<CR>
+  nnoremap <leader>ev :edit $MYVIMRC<CR>
+
+  nnoremap <silent> <leader>l :setlocal list!<CR>
+  nnoremap <silent> <leader>n :setlocal number!<CR>
+  nnoremap <silent> <leader>ss :setlocal spell!<CR>
+  nnoremap <CR> :nohlsearch<CR>
+
+  " Editing
+  nnoremap <leader>o o<esc>k<CR>
+  nnoremap <leader>O O<esc>k<CR>
+  nnoremap <leader>w :w!<CR>
+
+  " Buffers
+  nnoremap <leader>d :bdelete<CR>
+  nnoremap <leader>> :bnext<CR>
+  nnoremap <leader>< :bprevious<CR>
+  nnoremap <leader><leader> <C-^>
+
+  " Plugins
+  nnoremap <leader>b :CtrlPBuffer<CR>
+  nnoremap <leader>t :TagbarToggle<CR>
+
+  " Functions
+  if exists("$TMUX")
+    nnoremap <leader>c :call OpenDirInTmuxPane(expand('%:p:h'))<CR>
+  endif
+  nnoremap <leader>r :call RenameFile()<CR>
+  nnoremap <C-S-S> :call <SID>SynStack()<CR>
+
+  " Start interactive EasyAlign with a Vim movement
+  nmap <Leader>a <Plug>(EasyAlign)
+  " ---------------------------------------------------------------------------
+
+
+  " ---------------------------------------------------------------------------
+  " INSERT MODE
+  " ---------------------------------------------------------------------------
+  " Disable arrow keys
+  inoremap <up> <nop>
+  inoremap <down> <nop>
+  inoremap <right> <nop>
+  inoremap <left> <nop>
+
+  " This is for Ruby hashes, JS arrow functions, etc.
+  inoremap <C-l> <Space>=><Space>
+  " ---------------------------------------------------------------------------
+
+
+  " ---------------------------------------------------------------------------
+  " VISUAL MODE
+  " ---------------------------------------------------------------------------
+  vnoremap < <gv
+  vnoremap > >gv
+  vnoremap <leader>y "+y
+  vnoremap <leader>p "+p
+  vnoremap <leader>P "+P
+  vnoremap <Tab> >gv
+  vnoremap <S-Tab> <gv
+
+  " Start interactive EasyAlign in visual mode
+  vmap <Enter> <Plug>(EasyAlign)
+  " ---------------------------------------------------------------------------
+
+
+  " ---------------------------------------------------------------------------
+  " COMMAND MODE
+  " ---------------------------------------------------------------------------
+  cnoremap w!! w !sudo tee % >/dev/null
+  cnoremap %% <C-R>=expand('%:p:h') . '/' <CR>
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" ABBREVIATIONS
+" -----------------------------------------------------------------------------
+  inoreabbrev eahc each
+" -----------------------------------------------------------------------------
+
+
+
+" -----------------------------------------------------------------------------
+" FUNCTIONS
+" -----------------------------------------------------------------------------
+  " Restore cursor position
+  function! RestoreCursor()
+    if line("'\"") <= line("$")
+      normal! g`"
+      return 1
+    endif
+  endfunction
+
+  augroup restoreCursor
+    autocmd!
+    autocmd BufWinEnter * call RestoreCursor()
+  augroup END
+
+  " Rename the current file
+  function! RenameFile()
+    let old_name = expand('%')
+    let new_name = input('New name: ', expand('%:p:h') . '/')
+    if new_name != '' && new_name != old_name
+        exec ':saveas ' . new_name
+        exec ':silent !rm ' . old_name
+        redraw!
+    endif
+  endfunction
+
+  if exists("$TMUX")
+    function! OpenDirInTmuxPane(dir)
+      call system("tmux split-window -v -c " . a:dir)
+    endfunction
+  endif
+
+  " Show syntax highlighting groups for word under cursor
+  " source: http://vimcasts.org/episodes/creating-colorschemes-for-vim/
+  function! s:SynStack()
+    if exists("*synstack")
+      echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+    endif
+  endfunction
+" -----------------------------------------------------------------------------
