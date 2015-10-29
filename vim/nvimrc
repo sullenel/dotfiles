@@ -1,7 +1,7 @@
 " -----------------------------------------------------------------------------
 " PLUGINS
 " -----------------------------------------------------------------------------
-  call plug#begin('~/.nvim/plugged')
+  call plug#begin('~/.config/nvim/plugged')
 
   " Actual plugins
   Plug 'kien/ctrlp.vim'
