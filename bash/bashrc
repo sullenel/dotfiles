@@ -105,5 +105,5 @@ mkcd() {
 
 tm() {
   local session="${1:-dev}"
-  tmux attach-session -t $session || tmux new-session -s $session
+  tmux new-session -A -s $session
 }
