@@ -23,6 +23,11 @@ if [[ -d $HOME/.npm-packages/bin ]]; then
 fi
 
 
+# Go
+export GOPATH="$HOME/dev/go"
+export PATH="$PATH:$GOPATH/bin"
+
+
 # Scripts
 [[ -d $HOME/.bin ]] && PATH="$PATH:$HOME/.bin"
 
