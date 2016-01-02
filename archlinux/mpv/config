@@ -9,6 +9,7 @@ sub-text-font="Ubuntu Regular"
 sub-scale=1
 osd-level=3
 osd-font-size=20
+osd-align-x=right
 
 # Other settings
 slang=en
