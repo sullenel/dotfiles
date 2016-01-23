@@ -32,5 +32,9 @@ export PATH="$PATH:$GOPATH/bin"
 [[ -d $HOME/.bin ]] && PATH="$PATH:$HOME/.bin"
 
 
+# SSH
+[[ -z "$SSH_AUTH_SOCK" ]] && eval "$(ssh-agent)"
+
+
 # Source ~/.bashrc
 [[ -f $HOME/.bashrc ]] && source $HOME/.bashrc
