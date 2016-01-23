@@ -11,17 +11,14 @@
   Plug 'bling/vim-airline'
   Plug 'scrooloose/syntastic'
   Plug 'tpope/vim-surround'
-  Plug 'tpope/vim-speeddating'
   Plug 'mattn/emmet-vim'
   Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-  Plug 'airblade/vim-gitgutter'
 
   " Syntax
   Plug 'aliva/vim-fish', { 'for': 'fish' }
   Plug 'peterhoeg/vim-qml', { 'for': 'qml' }
   Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
   Plug 'urso/haskell_syntax.vim', { 'for': 'haskell' }
-  Plug 'rust-lang/rust.vim', { 'for': 'rust' }
   Plug 'othree/yajs.vim', { 'for': 'javascript' }
   Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
   Plug 'fatih/vim-go'
