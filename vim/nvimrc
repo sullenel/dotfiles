@@ -34,6 +34,8 @@
   Plug 'blueshirts/darcula'
   Plug 'chriskempson/base16-vim'
   Plug 'jdkanani/vim-material-theme'
+  Plug 'joshdick/onedark.vim'
+  Plug 'joshdick/airline-onedark.vim'
 
   call plug#end()
 " -----------------------------------------------------------------------------
@@ -44,7 +46,7 @@
 " SETTINGS FOR PLUGINS
 " -----------------------------------------------------------------------------
   " Airline: theme
-  let g:airline_theme = "gruvbox"
+  let g:airline_theme = 'onedark'
 
   " Airline: enable paste detection
   let g:airline_detect_paste = 1
@@ -208,8 +210,7 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Set the colorscheme
-  set background=dark
-  colorscheme gruvbox
+  colorscheme onedark
 
   " Minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
