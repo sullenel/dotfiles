@@ -246,6 +246,7 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Set the colorscheme
+  set bg=dark
   colorscheme hybrid
 
   " Minimal number of screen lines to keep above and below the cursor
