@@ -24,6 +24,7 @@
   Plug 'rust-lang/rust.vim', { 'for': 'rust' }
   Plug 'othree/yajs.vim', { 'for': 'javascript' }
   Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
+  Plug 'fatih/vim-go'
 
   " Colorschemes
   Plug 'tomasr/molokai'
