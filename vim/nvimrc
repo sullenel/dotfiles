@@ -19,7 +19,6 @@
   Plug 'peterhoeg/vim-qml', { 'for': 'qml' }
   Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
   Plug 'urso/haskell_syntax.vim', { 'for': 'haskell' }
-  Plug 'othree/yajs.vim', { 'for': 'javascript' }
   Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
   Plug 'fatih/vim-go'
 
@@ -28,9 +27,7 @@
   Plug 'w0ng/vim-hybrid'
   Plug 'morhetz/gruvbox'
   Plug 'reedes/vim-colors-pencil'
-  Plug 'altercation/vim-colors-solarized'
   Plug 'blueshirts/darcula'
-  Plug 'chriskempson/base16-vim'
   Plug 'jdkanani/vim-material-theme'
   Plug 'joshdick/onedark.vim'
   Plug 'joshdick/airline-onedark.vim'
