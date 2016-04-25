@@ -4,7 +4,7 @@
   call plug#begin('~/.config/nvim/plugged')
 
   " Actual plugins
-  Plug 'kien/ctrlp.vim'
+  Plug 'ctrlpvim/ctrlp.vim'
   Plug 'SirVer/ultisnips'
   Plug 'junegunn/vim-easy-align'
   Plug 'tpope/vim-commentary'
