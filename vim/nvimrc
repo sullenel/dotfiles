@@ -19,10 +19,12 @@
   Plug 'peterhoeg/vim-qml', { 'for': 'qml' }
   Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
   Plug 'urso/haskell_syntax.vim', { 'for': 'haskell' }
-  Plug 'digitaltoad/vim-jade', { 'for': 'jade' }
   Plug 'fatih/vim-go'
+  Plug 'pangloss/vim-javascript'
+  Plug 'mxw/vim-jsx'
 
   " Colorschemes
+  Plug 'mhartington/oceanic-next'
   Plug 'tomasr/molokai'
   Plug 'w0ng/vim-hybrid'
   Plug 'morhetz/gruvbox'
@@ -30,7 +32,6 @@
   Plug 'blueshirts/darcula'
   Plug 'jdkanani/vim-material-theme'
   Plug 'joshdick/onedark.vim'
-  Plug 'joshdick/airline-onedark.vim'
 
   call plug#end()
 " -----------------------------------------------------------------------------
@@ -81,6 +82,9 @@
 
   " Vimerl: don't replace the content of the current buffer when loading a code skeleton
   let erlang_skel_replace = 0
+
+  " JSX: enable JSX syntax in .js files
+  let g:jsx_ext_required = 0
 " -----------------------------------------------------------------------------
 
 
