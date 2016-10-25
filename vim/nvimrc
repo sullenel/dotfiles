@@ -297,7 +297,7 @@
 " INDENTATION
 " -----------------------------------------------------------------------------
   " Number of spaces to use for each step of indent (<<, >>, etc.)
-  set shiftwidth=2
+  set shiftwidth=4
 
   " Use spaces in place of tab characters
   set expandtab
