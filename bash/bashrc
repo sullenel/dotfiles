@@ -80,7 +80,6 @@ alias ftraceroute="traceroute -n -w 3 -q 1"
 alias myip="wget -O - -q icanhazip.com"
 alias xcopy="xclip -selection clipboard"
 alias xpaste="xclip -selection clipboard -out"
-alias nvim="NVIM_TUI_ENABLE_TRUE_COLOR=1 nvim"
 
 # Arch Linux specific
 if [[ -f /etc/arch-release ]]; then
@@ -90,20 +89,19 @@ if [[ -f /etc/arch-release ]]; then
     alias poweroff="systemctl poweroff"
     alias halt="systemctl halt"
     alias suspnd="systemctl suspend"
-    alias yolo="apacman -Syyu"
+    alias yolo="apacman -Syu"
 fi
 
 
 # -----------------------------------------------------------------------------
 # FUNCTIONS
 # -----------------------------------------------------------------------------
-# Make directory and cd into it
 mkcd() {
     mkdir -p "$1"
     cd "$1"
 }
 
 tm() {
-  local session="${1:-dev}"
-  tmux new-session -A -s $session
+    local session="${1:-dev}"
+    tmux new-session -A -s $session
 }
