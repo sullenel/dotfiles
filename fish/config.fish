@@ -2,10 +2,7 @@
 # SETTINGS
 # -----------------------------------------------------------------------------
 # remove the greeting message
-set fish_greeting ""
-
-# don't copy to system clipboard
-set FISH_CLIPBOARD_CMD "cat"
+set --erase fish_greeting
 
 # remove weird output before each prompt
 function fish_title;end
@@ -31,8 +28,8 @@ set fish_color_search_match normal
 # VARIABLES
 # -----------------------------------------------------------------------------
 # Editor
-set -U EDITOR vim
-set -U VISUAL $EDITOR
+set -gx EDITOR nvim
+set -gx VISUAL $EDITOR
 
 # Terminal
 test $TMUX; and set -x TERM screen-256color; or set -x TERM xterm-256color
