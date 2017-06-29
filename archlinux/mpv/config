@@ -1,23 +1,28 @@
 # Audio settings
 ao=alsa
-softvol=no
-gapless-audio=yes
+
+# Video settings
 cache=no
 
-# Video Settings
-sub-text-font="Ubuntu Regular"
-sub-scale=1
-osd-level=3
-osd-font-size=20
-osd-align-x=right
-
-# Other settings
+# Subtitles
+sub-font-size=32
+sub-color="#FFF000"
+sub-scale-by-window=no
 slang=en
 
+# OSD
+osd-level=3
+osd-font-size=18
+osd-align-x=right
+osd-color="#FFF000"
+osd-scale-by-window=no
+osd-margin-x=8
+osd-margin-y=8
+osd-bar=no
+
 # Screenshots
-screenshot-format=png
-screenshot-template="%n"
-screenshot-directory=
+screenshot-format=jpg
+screenshot-template="%F_%wH-%wM-%wS"
 
 [pseudo-gui]
 screenshot-directory=
