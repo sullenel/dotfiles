@@ -21,7 +21,6 @@
   Plug 'SirVer/ultisnips'
   Plug 'junegunn/vim-easy-align'
   Plug 'tpope/vim-commentary'
-  Plug 'bling/vim-airline'
   Plug 'scrooloose/syntastic'
   Plug 'tpope/vim-surround'
   Plug 'mattn/emmet-vim'
@@ -48,28 +47,6 @@
 " -----------------------------------------------------------------------------
 " SETTINGS FOR PLUGINS
 " -----------------------------------------------------------------------------
-  " Airline: theme
-  let g:airline_theme = 'powerlineish'
-
-  " Airline: enable paste detection
-  let g:airline_detect_paste = 1
-
-  " Airline: remove left and right separators
-  let g:airline_left_sep = ''
-  let g:airline_right_sep = ''
-
-  " Airline: disable CSV integration
-  let g:airline#extensions#csv#enabled = 0
-
-  " Airline: disable whitespace detection
-  let g:airline#extensions#whitespace#enabled = 0
-
-  " Airline: enable syntastic integration
-  let g:airline#extensions#syntastic#enabled = 1
-
-  " Airline: disable tagbar integration
-  let g:airline#extensions#tagbar#enabled = 0
-
   " Tagbar: don't sort the tags
   let g:tagbar_sort = 0
 
