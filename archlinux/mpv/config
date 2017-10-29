@@ -22,7 +22,7 @@ osd-bar=no
 
 # Screenshots
 screenshot-format=jpg
-screenshot-template="%F_%wH-%wM-%wS"
+screenshot-template="%F_%wH-%wM-%wS.%wT"
 
 [pseudo-gui]
 screenshot-directory=
