@@ -3,7 +3,7 @@
         email = sullenerd@gmail.com
 [core]
         editor = vim
-        autocrlf = input
+	autocrlf = false
         safecrlf = true
         pager = less -R
 [color]
@@ -19,6 +19,11 @@
         cob = checkout -b
         dw = diff --word-diff
         dt = difftool
+	dc = diff --cached
+	br = branch
+	ca = commit --amend
+	ap = add --patch
+	lol = log --format=oneline
 [merge]
         tool = vimdiff
 [push]
