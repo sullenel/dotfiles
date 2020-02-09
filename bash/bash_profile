@@ -27,3 +27,15 @@ export PATH="$PATH:$GOPATH/bin"
 
 # Source ~/.bashrc
 [[ -f $HOME/.bashrc ]] && source $HOME/.bashrc
+
+
+# Android
+export ANDROID_HOME=$HOME/android/sdk
+export PATH=$ANDROID_HOME/tools:$PATH
+export PATH=$ANDROID_HOME/tools/bin:$PATH
+export PATH=$ANDROID_HOME/platform-tools:$PATH
+
+
+# Flutter
+export PATH=$HOME/dev/.flutter/bin:$PATH
+export CHROME_EXECUTABLE=chromium
