@@ -2,7 +2,7 @@
 # SETTINGS
 # -----------------------------------------------------------------------------
 # remove the greeting message
-set --erase fish_greeting
+set fish_greeting ""
 
 # remove weird output before each prompt
 function fish_title;end
