@@ -397,13 +397,20 @@
 
   " Buffers
   nnoremap <leader>d :bdelete<CR>
+  nnoremap <leader>B :bufdo bdelete<CR>
   nnoremap <leader>> :bnext<CR>
   nnoremap <leader>< :bprevious<CR>
   nnoremap <leader><leader> <C-^>
 
   " Plugins
-  nnoremap <leader>b :CtrlPBuffer<CR>
-  nnoremap <leader>t :TagbarToggle<CR>
+  nnoremap <leader>a :Ag<CR>
+  nnoremap <leader>ch :History:<CR>
+  nnoremap <leader>sh :History/<CR>
+  nnoremap <leader>g :GFiles<CR>
+  nnoremap <leader>f :Files<CR>
+  nnoremap <leader>b :Buffers<CR>
+  nnoremap <leader>l :Lines<CR>
+  nnoremap <leader>t :Tags<CR>
 
   " Functions
   if exists("$TMUX")
@@ -425,6 +432,10 @@
 
   " This is for Ruby hashes, JS arrow functions, etc.
   inoremap <C-l> <Space>=><Space>
+
+  " Insert date
+  nnoremap <F3> i<C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR><Esc>
+  inoremap <F3> <C-R>=strftime("%Y-%m-%d %H:%M:%S")<CR>
   " ---------------------------------------------------------------------------
 
 
