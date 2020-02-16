@@ -210,7 +210,8 @@
   set termguicolors
 
   " Set the colorscheme
-  colorscheme onedark
+  set background=dark
+  colorscheme one
 
   " Minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
