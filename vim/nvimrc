@@ -225,11 +225,6 @@
   " Put the new window below the current one
   set splitbelow
 
-  " Vertical ruler (sort of)
-  if exists('+colorcolumn')
-    set colorcolumn=80
-  endif
-
   " Vertical separators
   set fillchars+=vert:\¦
 
