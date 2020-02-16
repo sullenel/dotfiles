@@ -4,34 +4,31 @@
   call plug#begin('~/.config/nvim/plugged')
 
   " Actual plugins
-  Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'SirVer/ultisnips'
-  Plug 'junegunn/vim-easy-align'
+  Plug 'junegunn/fzf'
+  Plug 'junegunn/fzf.vim'
   Plug 'tpope/vim-commentary'
   Plug 'bling/vim-airline'
-  Plug 'scrooloose/syntastic'
   Plug 'tpope/vim-surround'
   Plug 'mattn/emmet-vim'
   Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
   " Syntax
   Plug 'aliva/vim-fish', { 'for': 'fish' }
-  Plug 'peterhoeg/vim-qml', { 'for': 'qml' }
-  Plug 'jimenezrick/vimerl', { 'for': 'erlang' }
-  Plug 'urso/haskell_syntax.vim', { 'for': 'haskell' }
-  Plug 'fatih/vim-go'
+  Plug 'fatih/vim-go', { 'for': 'go' }
   Plug 'pangloss/vim-javascript'
-  Plug 'mxw/vim-jsx'
+  Plug 'MaxMEllon/vim-jsx-pretty'
+  Plug 'justinmk/vim-syntax-extra'
+  Plug 'dart-lang/dart-vim-plugin'
 
   " Colorschemes
-  Plug 'mhartington/oceanic-next'
   Plug 'tomasr/molokai'
   Plug 'w0ng/vim-hybrid'
-  Plug 'morhetz/gruvbox'
-  Plug 'reedes/vim-colors-pencil'
   Plug 'blueshirts/darcula'
   Plug 'jdkanani/vim-material-theme'
   Plug 'joshdick/onedark.vim'
+  Plug 'crusoexia/vim-monokai'
+  Plug 'rakr/vim-one'
 
   call plug#end()
 " -----------------------------------------------------------------------------
@@ -66,12 +63,6 @@
   " Tagbar: don't sort the tags
   let g:tagbar_sort = 0
 
-  " CtrlP: custom ignore patterns
-  let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn|bzr)|node_modules)$'
-
-  " CtrlP: disable caching
-  let g:ctrlp_use_caching = 0
-
   " UltiSnips: define the keys for triggering UltiSnips actions
   let g:UltiSnipsExpandTrigger = "<tab>"
   let g:UltiSnipsJumpForwardTrigger = "<tab>"
@@ -80,11 +71,18 @@
   " UltiSnips: edit snippets in a vertical window
   let g:UltiSnipsEditSplit = "vertical"
 
-  " Vimerl: don't replace the content of the current buffer when loading a code skeleton
-  let erlang_skel_replace = 0
-
   " JSX: enable JSX syntax in .js files
   let g:jsx_ext_required = 0
+
+  " FZF: ignore
+  let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
+
+  " Dart
+  let dart_format_on_save = 1
+  let dart_style_guide = 2
+
+  " Start deoplete
+  let g:deoplete#enable_at_startup = 1
 " -----------------------------------------------------------------------------
 
 
@@ -417,9 +415,6 @@
   endif
   nnoremap <leader>r :call RenameFile()<CR>
   nnoremap <C-S-S> :call <SID>SynStack()<CR>
-
-  " Start interactive EasyAlign with a Vim movement
-  nmap <Leader>a <Plug>(EasyAlign)
   " ---------------------------------------------------------------------------
 
 
@@ -447,9 +442,6 @@
   vnoremap <leader>P "+P
   vnoremap <Tab> >gv
   vnoremap <S-Tab> <gv
-
-  " Start interactive EasyAlign in visual mode
-  vmap <Enter> <Plug>(EasyAlign)
   " ---------------------------------------------------------------------------
 
 
