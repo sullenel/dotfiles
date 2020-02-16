@@ -17,7 +17,6 @@
   call plug#begin('~/.vim/plugged')
 
   " Actual plugins
-  Plug 'kien/ctrlp.vim'
   Plug 'SirVer/ultisnips'
   Plug 'junegunn/vim-easy-align'
   Plug 'tpope/vim-commentary'
@@ -49,12 +48,6 @@
 " -----------------------------------------------------------------------------
   " Tagbar: don't sort the tags
   let g:tagbar_sort = 0
-
-  " CtrlP: custom ignore patterns
-  let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn|bzr)|node_modules)$'
-
-  " CtrlP: disable caching
-  let g:ctrlp_use_caching = 0
 
   " UltiSnips: define the keys for triggering UltiSnips actions
   let g:UltiSnipsExpandTrigger = "<tab>"
@@ -238,11 +231,6 @@
   " Put the new window below the current one
   set splitbelow
 
-  " Vertical ruler (sort of)
-  if exists('+colorcolumn')
-    set colorcolumn=80
-  endif
-
   " Vertical separators
   set fillchars+=vert:\¦
 
@@ -258,9 +246,6 @@
   if &term =~ '256color'
     set t_ut=
   end
-
-  " Highlight the current line
-  set cursorline
 
   " Show command in the last line of the screen
   set showcmd
@@ -434,7 +419,6 @@
   nnoremap <leader><leader> <C-^>
 
   " Plugins
-  nnoremap <leader>b :CtrlPBuffer<CR>
   nnoremap <leader>t :TagbarToggle<CR>
 
   " Functions
