@@ -24,6 +24,7 @@
 	ca = commit --amend
 	ap = add --patch
 	lol = log --format=oneline
+	cc = rev-list --all --count
 [merge]
         tool = vimdiff
 [push]
@@ -32,3 +33,5 @@
         tool = vimdiff
 [difftool]
         prompt = false
+[pull]
+	rebase = false
