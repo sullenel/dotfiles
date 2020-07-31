@@ -3,7 +3,7 @@
         email = sullenerd@gmail.com
 [core]
         editor = vim
-	autocrlf = false
+	autocrlf = input
         safecrlf = true
         pager = less -R
 [color]
@@ -25,6 +25,8 @@
 	ap = add --patch
 	lol = log --format=oneline
 	cc = rev-list --all --count
+	cl = config --list --local
+	slc = show HEAD
 [merge]
         tool = vimdiff
 [push]
