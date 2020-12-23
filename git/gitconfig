@@ -27,6 +27,9 @@
 	cc = rev-list --all --count
 	cl = config --list --local
 	slc = show HEAD
+	cia = commit --amend
+	cian = commit --amend --no-edit
+	sm = merge --no-commit --no-ff
 [merge]
         tool = vimdiff
 [push]
