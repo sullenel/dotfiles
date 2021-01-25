@@ -1,13 +1,11 @@
 # -----------------------------------------------------------------------------
 # ALIASES
 # -----------------------------------------------------------------------------
-alias ls="ls --color=auto"
 alias l="ls"
 alias la="ls -A"
-alias ll="ls++"
+alias ll="ls -l"
 alias l1="ls -1"
 alias lr="ls -R"
-alias lx="ls -lhBX" # extension
 alias lz="ls -lhrS" # size
 alias lt="ls -lhrt" # date
 

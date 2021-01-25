@@ -2,3 +2,4 @@
 !.gitignore
 *~
 TODO.md
+zsh/zhistory
