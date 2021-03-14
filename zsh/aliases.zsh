@@ -28,6 +28,7 @@ alias myip="curl icanhazip.com"
 alias whereami="curl --silent http://freegeoip.net/json/ | pyson"
 alias pyson="python -mjson.tool"
 alias rr="rbenv rehash"
+alias ginit="git init && git add . && git commit -m 'Init'"
 
 
 # -----------------------------------------------------------------------------
