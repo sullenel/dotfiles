@@ -15,7 +15,7 @@
 
   " Syntax
   Plug 'aliva/vim-fish', { 'for': 'fish' }
-  Plug 'fatih/vim-go', { 'for': 'go' }
+  Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
   Plug 'pangloss/vim-javascript'
   Plug 'MaxMEllon/vim-jsx-pretty'
   Plug 'justinmk/vim-syntax-extra'
@@ -84,6 +84,9 @@
 
   " Start deoplete
   let g:deoplete#enable_at_startup = 1
+
+  " GO
+  let g:go_fmt_command = "gofmt"
 " -----------------------------------------------------------------------------
 
 
