@@ -30,6 +30,8 @@
 	cia = commit --amend
 	cian = commit --amend --no-edit
 	sm = merge --no-commit --no-ff
+	pom = push -u origin master
+	clg = config --list --global
 [merge]
         tool = vimdiff
 [push]
