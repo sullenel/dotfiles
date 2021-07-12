@@ -17,7 +17,7 @@ fi
 
 
 # Go
-export GOPATH="$HOME/dev/go"
+export GOPATH="$HOME/dev/.go"
 export PATH="$PATH:$GOPATH/bin"
 
 
