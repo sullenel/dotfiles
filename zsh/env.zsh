@@ -8,6 +8,13 @@ then
     # For reference: https://github.com/sorin-ionescu/prezto/issues/966
     export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
+    # Ruby
+    export PATH="/usr/local/opt/ruby/bin:$PATH"
+    export LDFLAGS="-L/usr/local/opt/ruby/lib"
+    export CPPFLAGS="-I/usr/local/opt/ruby/include"
+    export GEM_HOME="$HOME/.gem"
+    export PATH="$GEM_HOME/bin:$PATH"
+
     # Android, Flutter
     export ANDROID_HOME="$HOME/Library/Android/sdk"
     export PATH="$PATH:$HOME/Dev/.flutter/bin"
