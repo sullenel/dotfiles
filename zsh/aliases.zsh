@@ -11,7 +11,7 @@ alias lt="ls -lhrt" # date
 
 alias cp="cp -iv"
 alias mv="mv -iv"
-alias rm="rm -Iv"
+alias rm="rm -v"
 alias md="mkdir -pv"
 alias ln="ln -i"
 alias diff="colordiff"
