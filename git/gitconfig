@@ -16,20 +16,18 @@
         rb = rebase
         ci = commit
         co = checkout
-        cob = checkout -b
-        dw = diff --word-diff
+        cb = checkout -b
+        dw = diff --color-word
         dt = difftool
 	dc = diff --cached
 	br = branch
-	ca = commit --amend
 	ap = add --patch
 	lol = log --format=oneline
 	cc = rev-list --all --count
-	cl = config --list --local
-	slc = show HEAD
+	cll = config --list --local
 	cia = commit --amend
 	cian = commit --amend --no-edit
-	sm = merge --no-commit --no-ff
+	mdr = merge --no-commit --no-ff
 	pom = push -u origin master
 	clg = config --list --global
 [merge]
