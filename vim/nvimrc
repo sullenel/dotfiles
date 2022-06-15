@@ -23,7 +23,6 @@
   Plug 'keith/swift.vim', { 'for': 'swift' }
 
   " Colorschemes
-  Plug 'tomasr/molokai'
   Plug 'w0ng/vim-hybrid'
   Plug 'blueshirts/darcula'
   Plug 'jdkanani/vim-material-theme'
