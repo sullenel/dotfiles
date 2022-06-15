@@ -15,18 +15,22 @@ then
     export GEM_HOME="$HOME/.gem"
     export PATH="$GEM_HOME/bin:$PATH"
 
-    # Android, Flutter
+    # Android
     export ANDROID_HOME="$HOME/Library/Android/sdk"
-    export PATH="$PATH:$HOME/Dev/.flutter/bin"
-    export PATH="$PATH:$HOME/Dev/.flutter/.pub-cache/bin"
     export PATH="$PATH:$ANDROID_HOME/platform-tools"
+
+    # Flutter
+    export FVM_HOME="$HOME/.tools/fvm"
+    FLUTTER_PATH="$FVM_HOME/default"
+    export PATH="$PATH:$FLUTTER_PATH/bin"
+    export PATH="$PATH:$FLUTTER_PATH/.pub-cache/bin"
 fi
 
 # Terminal
 [ -n "$TMUX" ] && export TERM=screen-256color || export TERM=xterm-256color
 
 # Python
-export PYTHONSTARTUP="$HOME/.pyrc"
+[[ -f "$HOME/.pyrc" ]] && export PYTHONSTARTUP="$HOME/.pyrc"
 
 # Editor
 export EDITOR="nvim"
