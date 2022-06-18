@@ -20,24 +20,11 @@ alias h="fc -l 1" # history
 alias j="jobs -l"
 
 alias todayis="date '+%B %d, %Y [%A] [%l:%M %p]'"
-alias ports="netstat -tulpn"
 alias fping="ping -c 5 -n -i 0.2 -W1"
 alias ftraceroute="traceroute -n -w 3 -q 1"
 alias tree="tree -hF"
 alias myip="curl icanhazip.com"
-alias whereami="curl --silent http://freegeoip.net/json/ | pyson"
-alias pyson="python -mjson.tool"
-alias rr="rbenv rehash"
-alias ginit="git init && git add . && git commit -m 'Init'"
-
-
-# -----------------------------------------------------------------------------
-# Linux Specific
-# -----------------------------------------------------------------------------
-if [[ $OSTYPE = 'linux-gnu' ]]; then
-    alias xcopy="xclip -selection clipboard"
-    alias xpaste="xclip -selection clipboard -out"
-fi
+alias ginit="git init && git add . && git commit -m 'init'"
 
 
 # -----------------------------------------------------------------------------
@@ -45,7 +32,6 @@ fi
 # -----------------------------------------------------------------------------
 if [[ -f /etc/arch-release ]]; then
     alias webcam="mpv -vf mirror -fps 15 tv:// -tv driver=v4l2:width=640:height=480:device=/dev/video0"
-    alias todo="$EDITOR ~/.conky/todo/conkyrc"
     alias hfill="hsetroot -fill"
     alias htile="hsetroot -tile"
     alias cltr="rm -rf ~/.local/share/Trash/"
@@ -53,9 +39,24 @@ if [[ -f /etc/arch-release ]]; then
     alias poweroff="systemctl poweroff"
     alias halt="systemctl halt"
     alias suspnd="systemctl suspend"
-    alias yolo="packer -Syyu"
+    alias yolo="yay -Syyu"
 fi
 
+
+# OS specific aliases
+case "$OSTYPE" in
+    # macOS
+    darwin*)
+        # TODO: add aliases
+    ;;
+
+    # Linux
+    linux*)
+        alias xcopy="xclip -selection clipboard"
+        alias xpaste="xclip -selection clipboard -out"
+        alias ports="netstat -tulpn"
+    ;;
+esac
 
 # -----------------------------------------------------------------------------
 # GLOBAL ALIASES
