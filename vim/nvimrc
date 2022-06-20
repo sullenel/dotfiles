@@ -488,6 +488,13 @@
     autocmd BufWinEnter * call RestoreCursor()
   augroup END
 
+  " Restore terminal's cursor shape on exit
+  " Source: https://vi.stackexchange.com/a/25107
+  augroup RestoreCursorShapeOnExit
+    autocmd!
+    autocmd VimLeave * set guicursor=a:hor20
+  augroup END
+
   " Rename the current file
   function! RenameFile()
     let old_name = expand('%')
