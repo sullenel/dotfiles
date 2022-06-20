@@ -30,6 +30,7 @@
 	mdr = merge --no-commit --no-ff
 	pom = push -u origin master
 	clg = config --list --global
+	rs = restore --staged
 [merge]
         tool = vimdiff
 [push]
