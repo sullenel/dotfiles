@@ -74,9 +74,6 @@
   " JSX: enable JSX syntax in .js files
   let g:jsx_ext_required = 0
 
-  " FZF: ignore
-  let $FZF_DEFAULT_COMMAND = 'ag -l -g ""'
-
   " Dart
   let dart_format_on_save = 1
   let dart_style_guide = 2
@@ -328,9 +325,9 @@
     autocmd InsertEnter * :setlocal nohlsearch
   endif
 
-  " Search using 'the silver searcher' (ag)
-  if executable("ag")
-    set grepprg=ag\ --nogroup\ --nocolor
+  " Search using ripgrep
+  if executable("rg")
+    set grepprg=rg\ --vimgrep\ --no-heading\ --smart-case
   endif
 " -----------------------------------------------------------------------------
 
