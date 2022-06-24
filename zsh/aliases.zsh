@@ -26,6 +26,10 @@ alias tree="tree -hF"
 alias myip="curl icanhazip.com"
 alias ginit="git init && git add . && git commit -m 'init'"
 
+# Flutter
+alias fpg="flutter packages get"
+alias fpu="flutter packages upgrade"
+alias fap="flutter pub add"
 
 # -----------------------------------------------------------------------------
 # Arch Linux Specific
@@ -47,7 +51,7 @@ fi
 case "$OSTYPE" in
     # macOS
     darwin*)
-        # TODO: add aliases
+        alias simsim="open -a Simulator"
     ;;
 
     # Linux
