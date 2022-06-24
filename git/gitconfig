@@ -2,7 +2,7 @@
         name = sullenel
 	email = sullenel@users.noreply.github.com
 [core]
-        editor = vim
+	editor = nvim
 	autocrlf = input
         safecrlf = true
         pager = less -R
