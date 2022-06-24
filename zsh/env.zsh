@@ -36,7 +36,7 @@ case "$OSTYPE" in
         export FVM_HOME="$HOME/.tools/fvm"
         FLUTTER_PATH="$FVM_HOME/default"
         export PATH="$PATH:$FLUTTER_PATH/bin"
-        export PATH="$PATH:$FLUTTER_PATH/.pub-cache/bin"
+        export PATH="$PATH":"$HOME/.pub-cache/bin"
         [[ -f "$HOME/.bin/completions/flutter.zsh" ]] && source "$HOME/.bin/completions/flutter.zsh"
     ;;
 esac
