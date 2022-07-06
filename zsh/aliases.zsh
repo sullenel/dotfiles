@@ -31,6 +31,9 @@ alias fpg="flutter packages get"
 alias fpu="flutter packages upgrade"
 alias fap="flutter pub add"
 
+# Android
+alias deeplink-android="adb shell am start -a android.intent.action.VIEW -d"
+
 # -----------------------------------------------------------------------------
 # Arch Linux Specific
 # -----------------------------------------------------------------------------
