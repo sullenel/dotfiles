@@ -31,6 +31,7 @@
 	pom = push -u origin master
 	clg = config --list --global
 	rs = restore --staged
+	rrb = push origin --delete
 [merge]
         tool = vimdiff
 [push]
