@@ -31,13 +31,21 @@ case "$OSTYPE" in
         # Android
         export ANDROID_HOME="$HOME/Library/Android/sdk"
         export PATH="$PATH:$ANDROID_HOME/platform-tools"
+        export PATH="$PATH:$ANDROID_HOME/build-tools/33.0.0"
+        export PATH="$PATH:$ANDROID_HOME/emulator"
+        export PATH="$PATH:$ANDROID_HOME/tools"
 
         # Flutter
         export FVM_HOME="$HOME/.tools/fvm"
         FLUTTER_PATH="$FVM_HOME/default"
         export PATH="$PATH:$FLUTTER_PATH/bin"
         export PATH="$PATH":"$HOME/.pub-cache/bin"
+        export FLUTTER_ROOT=$FLUTTER_PATH
         [[ -f "$HOME/.bin/completions/flutter.zsh" ]] && source "$HOME/.bin/completions/flutter.zsh"
+
+        # Java
+        export PATH="$(brew --prefix)/opt/openjdk/bin:$PATH"
+        export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
     ;;
 esac
 
@@ -63,3 +71,6 @@ NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
 PATH="$NPM_PACKAGES/bin:$PATH"
 unset MANPATH
 MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+
+# Fastlane
+export FASTLANE_OPT_OUT_USAGE=1
