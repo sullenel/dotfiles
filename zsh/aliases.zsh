@@ -30,6 +30,7 @@ alias ginit="git init && git add . && git commit -m 'init'"
 alias fpg="flutter packages get"
 alias fpu="flutter packages upgrade"
 alias fap="flutter pub add"
+alias test-coverage-report="flutter test --coverage && genhtml coverage/lcov.info -o coverage/html && open coverage/html/index.html"
 
 # Android
 alias deeplink-android="adb shell am start -a android.intent.action.VIEW -d"
@@ -55,6 +56,8 @@ case "$OSTYPE" in
     # macOS
     darwin*)
         alias simsim="open -a Simulator"
+        alias cargo="cd ~/Work/cargo"
+        alias send-push-ios="xcrun simctl push booted"
     ;;
 
     # Linux
