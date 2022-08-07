@@ -32,6 +32,7 @@
 	clg = config --list --global
 	rs = restore --staged
 	rrb = push origin --delete
+	pot = push origin master --tags
 [merge]
         tool = vimdiff
 [push]
