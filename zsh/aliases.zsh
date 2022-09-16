@@ -58,6 +58,9 @@ case "$OSTYPE" in
         alias simsim="open -a Simulator"
         alias cargo="cd ~/Work/cargo"
         alias send-push-ios="xcrun simctl push booted"
+        alias deeplink-ios="xcrun simctl openurl booted"
+        alias fl="bundle exec fastlane"
+        alias show-wifi-password="security find-generic-password -wa"
     ;;
 
     # Linux
