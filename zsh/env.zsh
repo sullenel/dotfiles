@@ -46,6 +46,12 @@ case "$OSTYPE" in
         # Java
         export PATH="$(brew --prefix)/opt/openjdk/bin:$PATH"
         export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+
+        # Chromium
+        # This is to hide the annoying infobar about missing Google API keys
+        export GOOGLE_API_KEY="no"
+        export GOOGLE_DEFAULT_CLIENT_ID="no"
+        export GOOGLE_DEFAULT_CLIENT_SECRET="no"
     ;;
 esac
 
@@ -61,6 +67,7 @@ export VISUAL=$EDITOR
 
 # Browser
 export BROWSER="chromium"
+export CHROME_EXECUTABLE="$BROWSER"
 
 # Scripts
 [[ -d "$HOME/.bin/" ]] && PATH="$HOME/.bin:$PATH"
