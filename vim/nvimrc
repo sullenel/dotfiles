@@ -23,12 +23,11 @@
   Plug 'keith/swift.vim', { 'for': 'swift' }
 
   " Colorschemes
-  Plug 'w0ng/vim-hybrid'
   Plug 'blueshirts/darcula'
   Plug 'jdkanani/vim-material-theme'
   Plug 'joshdick/onedark.vim'
   Plug 'crusoexia/vim-monokai'
-  Plug 'rakr/vim-one'
+  Plug 'arzg/vim-substrata'
 
   call plug#end()
 " -----------------------------------------------------------------------------
@@ -39,7 +38,7 @@
 " SETTINGS FOR PLUGINS
 " -----------------------------------------------------------------------------
   " Airline: theme
-  let g:airline_theme = 'onedark'
+  let g:airline_theme = 'dark'
 
   " Airline: enable paste detection
   let g:airline_detect_paste = 1
@@ -207,11 +206,13 @@
 " APPEARANCE
 " -----------------------------------------------------------------------------
   " Enable true color
-  set termguicolors
+  if (has("termguicolors"))
+    set termguicolors
+  endif
 
   " Set the colorscheme
   set background=dark
-  colorscheme one
+  colorscheme substrata
 
   " Minimal number of screen lines to keep above and below the cursor
   set scrolloff=3
