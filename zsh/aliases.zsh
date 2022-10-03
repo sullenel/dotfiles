@@ -25,6 +25,9 @@ alias ftraceroute="traceroute -n -w 3 -q 1"
 alias tree="tree -hF"
 alias myip="curl icanhazip.com"
 alias ginit="git init && git add . && git commit -m 'init'"
+alias cert-info="openssl x509 -noout -text -in"
+alias cert-subject="openssl x509 -noout -subject -issuer -in"
+alias cert-pubkey="openssl x509 -noout -pubkey -in"
 
 # Flutter
 alias fpg="flutter packages get"
