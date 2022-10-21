@@ -33,6 +33,7 @@ alias cert-pubkey="openssl x509 -noout -pubkey -in"
 alias fpg="flutter packages get"
 alias fpu="flutter packages upgrade"
 alias fap="flutter pub add"
+alias fgen="flutter pub run build_runner build --delete-conflicting-outputs"
 alias test-coverage-report="flutter test --coverage && genhtml coverage/lcov.info -o coverage/html && open coverage/html/index.html"
 
 # Android
@@ -64,6 +65,7 @@ case "$OSTYPE" in
         alias deeplink-ios="xcrun simctl openurl booted"
         alias fl="bundle exec fastlane"
         alias show-wifi-password="security find-generic-password -wa"
+        alias yolo="brew update && brew upgrade" # to update installed tools
     ;;
 
     # Linux
