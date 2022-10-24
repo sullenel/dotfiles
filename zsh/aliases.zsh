@@ -28,11 +28,15 @@ alias ginit="git init && git add . && git commit -m 'init'"
 alias cert-info="openssl x509 -noout -text -in"
 alias cert-subject="openssl x509 -noout -subject -issuer -in"
 alias cert-pubkey="openssl x509 -noout -pubkey -in"
+# TODO: add linux equivalents if there are any
+alias enable-font-smoothing="true"
+alias disable-font-smoothing="true"
 
 # Flutter
 alias fpg="flutter packages get"
 alias fpu="flutter packages upgrade"
 alias fap="flutter pub add"
+alias fug="disable-font-smoothing; flutter test --update-goldens; enable-font-smoothing" # update golden files
 alias fgen="flutter pub run build_runner build --delete-conflicting-outputs"
 alias test-coverage-report="flutter test --coverage && genhtml coverage/lcov.info -o coverage/html && open coverage/html/index.html"
 
@@ -66,6 +70,9 @@ case "$OSTYPE" in
         alias fl="bundle exec fastlane"
         alias show-wifi-password="security find-generic-password -wa"
         alias yolo="brew update && brew upgrade" # to update installed tools
+        # Source: https://apple.stackexchange.com/a/37590
+        alias enable-font-smoothing="defaults -currentHost write -globalDomain AppleFontSmoothing -int 2"
+        alias disable-font-smoothing="defaults -currentHost write -globalDomain AppleFontSmoothing -int 0"
     ;;
 
     # Linux
