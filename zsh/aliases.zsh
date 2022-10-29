@@ -24,7 +24,7 @@ alias fping="ping -c 5 -n -i 0.2 -W1"
 alias ftraceroute="traceroute -n -w 3 -q 1"
 alias tree="tree -hF"
 alias myip="curl icanhazip.com"
-alias ginit="git init && git add . && git commit -m 'init'"
+alias ginit="git init && git add . && git commit -m 'chore: init'"
 alias cert-info="openssl x509 -noout -text -in"
 alias cert-subject="openssl x509 -noout -subject -issuer -in"
 alias cert-pubkey="openssl x509 -noout -pubkey -in"
@@ -73,6 +73,7 @@ case "$OSTYPE" in
         # Source: https://apple.stackexchange.com/a/37590
         alias enable-font-smoothing="defaults -currentHost write -globalDomain AppleFontSmoothing -int 2"
         alias disable-font-smoothing="defaults -currentHost write -globalDomain AppleFontSmoothing -int 0"
+        alias ssd-info="smartctl --all /dev/disk0"
     ;;
 
     # Linux
