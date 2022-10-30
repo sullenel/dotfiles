@@ -33,6 +33,9 @@
 	rs = restore --staged
 	rrb = push origin --delete
 	pot = push origin master --tags
+	attach = checkout -
+	new-branch = switch -c
+	list-authors = shortlog -e -s -n --no-merges
 [merge]
         tool = vimdiff
 [push]
