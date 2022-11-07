@@ -1,0 +1,26 @@
+theme = "monokai_pro_octagon"
+
+[editor]
+mouse = false
+rulers = [80]
+idle-timeout = 200
+color-modes = true
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name", "diagnostics"]
+center = []
+right = ["selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.whitespace.render]
+space = "none"
+tab = "none"
+newline = "none"
+
+[editor.indent-guides]
+render = true
