@@ -31,6 +31,8 @@ alias cert-pubkey="openssl x509 -noout -pubkey -in"
 # TODO: add linux equivalents if there are any
 alias enable-font-smoothing="true"
 alias disable-font-smoothing="true"
+# Source: https://stackoverflow.com/q/2654281
+alias clear-exif="exiftool -all= " # NOTE: overrides the original file
 
 # Flutter
 alias fpg="flutter packages get"
@@ -38,10 +40,21 @@ alias fpu="flutter packages upgrade"
 alias fap="flutter pub add"
 alias fug="disable-font-smoothing; flutter test --update-goldens; enable-font-smoothing" # update golden files
 alias fgen="flutter pub run build_runner build --delete-conflicting-outputs"
+alias fwg="flutter pub run build_runner watch --delete-conflicting-outputs"
 alias test-coverage-report="flutter test --coverage && genhtml coverage/lcov.info -o coverage/html && open coverage/html/index.html"
 
 # Android
 alias deeplink-android="adb shell am start -a android.intent.action.VIEW -d"
+
+# Git (conventional commit helpers)
+function ci-feat()      { git commit -m "feat: "$1"" }
+function ci-fix()       { git commit -m "fix: "$1"" }
+function ci-test()      { git commit -m "test: "$1"" }
+function ci-ref()       { git commit -m "refactor: "$1"" }
+function ci-misc()      { git commit -m "chore: "$1"" }
+function ci-style()     { git commit -m "style: "$1"" }
+function ci-build()     { git commit -m "build: "$1"" }
+
 
 # -----------------------------------------------------------------------------
 # Arch Linux Specific
@@ -62,18 +75,23 @@ fi
 # OS specific aliases
 case "$OSTYPE" in
     # macOS
+    # FIXME: use sw_vers -productName instead
     darwin*)
         alias simsim="open -a Simulator"
         alias cargo="cd ~/Work/cargo"
         alias send-push-ios="xcrun simctl push booted"
         alias deeplink-ios="xcrun simctl openurl booted"
         alias fl="bundle exec fastlane"
-        alias show-wifi-password="security find-generic-password -wa"
         alias yolo="brew update && brew upgrade" # to update installed tools
         # Source: https://apple.stackexchange.com/a/37590
         alias enable-font-smoothing="defaults -currentHost write -globalDomain AppleFontSmoothing -int 2"
         alias disable-font-smoothing="defaults -currentHost write -globalDomain AppleFontSmoothing -int 0"
         alias ssd-info="smartctl --all /dev/disk0"
+        alias simctl="xcrun simctl"
+        # Needs SSID
+        alias show-wifi-password="security find-generic-password -wa"
+        # Needs a path to the app
+        alias show-app-entitlements="codesign -dvvv --entitlements - "
     ;;
 
     # Linux
