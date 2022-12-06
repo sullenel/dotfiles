@@ -11,6 +11,7 @@ FormatString = "%(n:%n :)%(a:%a - :)%(t:%t:)%(A: \(%A\):)"
 InputBuffer = 512
 OutputBuffer = 512
 Prebuffering = 64
+SoundDriver = JACK
 ALSADevice = default
 ALSAMixer1 = PCM
 ALSAMixer2 = Master
