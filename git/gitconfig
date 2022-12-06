@@ -11,7 +11,7 @@
 [help]
         autocorrect = 1
 [alias]
-        pl = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+        pl = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cd)%Creset - %s %C(bold yellow)<%an>%Creset' --abbrev-commit --date=iso8601
         st = status
         rb = rebase
         ci = commit
@@ -36,6 +36,8 @@
 	attach = checkout -
 	new-branch = switch -c
 	list-authors = shortlog -e -s -n --no-merges
+	accept-remote-changes = checkout --theirs
+	accept-local-changes = checkout --ours
 [merge]
         tool = vimdiff
 [push]
