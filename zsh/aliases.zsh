@@ -33,15 +33,16 @@ alias enable-font-smoothing="true"
 alias disable-font-smoothing="true"
 # Source: https://stackoverflow.com/q/2654281
 alias clear-exif="exiftool -all= " # NOTE: overrides the original file
+alias inshallah="sudo" # hehe
 
 # Flutter
-alias fpg="flutter packages get"
-alias fpu="flutter packages upgrade"
-alias fap="flutter pub add"
+alias fpg="fvm flutter packages get"
+alias fpu="fvm flutter packages upgrade"
+alias fap="fvm flutter pub add"
 alias fug="disable-font-smoothing; flutter test --update-goldens; enable-font-smoothing" # update golden files
-alias fgen="flutter pub run build_runner build --delete-conflicting-outputs"
-alias fwg="flutter pub run build_runner watch --delete-conflicting-outputs"
-alias test-coverage-report="flutter test --coverage && genhtml coverage/lcov.info -o coverage/html && open coverage/html/index.html"
+alias fgen="fvm flutter pub run build_runner build --delete-conflicting-outputs"
+alias fwg="fvm flutter pub run build_runner watch --delete-conflicting-outputs"
+alias test-coverage-report="fvm flutter test --coverage && genhtml coverage/lcov.info -o coverage/html && open coverage/html/index.html"
 
 # Android
 alias deeplink-android="adb shell am start -a android.intent.action.VIEW -d"
@@ -92,6 +93,8 @@ case "$OSTYPE" in
         alias show-wifi-password="security find-generic-password -wa"
         # Needs a path to the app
         alias show-app-entitlements="codesign -dvvv --entitlements - "
+        # Show files added to iBooks
+        alias show-books="cd $HOME/Library/Mobile\ Documents/iCloud~com~apple~iBooks/Documents"
     ;;
 
     # Linux
