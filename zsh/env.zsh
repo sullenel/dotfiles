@@ -22,11 +22,11 @@ case "$OSTYPE" in
         export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
         # Ruby
-        export PATH="/usr/local/opt/ruby/bin:$PATH"
-        export LDFLAGS="-L/usr/local/opt/ruby/lib"
-        export CPPFLAGS="-I/usr/local/opt/ruby/include"
         export GEM_HOME="$HOME/.gem"
         export PATH="$GEM_HOME/bin:$PATH"
+
+        HOMEBREW_RUBY="/opt/homebrew/opt/ruby/bin"
+        [[ -d "$HOMEBREW_RUBY" ]] && export PATH="$HOMEBREW_RUBY:$PATH"
 
         # Android
         export ANDROID_HOME="$HOME/Library/Android/sdk"
@@ -39,7 +39,7 @@ case "$OSTYPE" in
         export FVM_HOME="$HOME/.tools/fvm"
         FLUTTER_PATH="$FVM_HOME/default"
         export PATH="$PATH:$FLUTTER_PATH/bin"
-        export PATH="$PATH":"$HOME/.pub-cache/bin"
+        export PATH="$PATH:$HOME/.pub-cache/bin"
         export FLUTTER_ROOT=$FLUTTER_PATH
         [[ -f "$HOME/.bin/completions/flutter.zsh" ]] && source "$HOME/.bin/completions/flutter.zsh"
 
@@ -81,3 +81,9 @@ MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
 
 # Fastlane
 export FASTLANE_OPT_OUT_USAGE=1
+
+# Go
+export GOPATH="$HOME/.tools/go"
+
+# Docker
+[[ -d "$HOME/.docker/bin" ]] && PATH="$HOME/.docker/bin:$PATH"
