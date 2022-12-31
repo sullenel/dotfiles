@@ -5,6 +5,8 @@ mouse = false
 rulers = [80]
 idle-timeout = 200
 color-modes = true
+auto-save = true
+bufferline = "multiple"
 
 [editor.statusline]
 left = ["mode", "spinner", "file-name", "diagnostics"]
