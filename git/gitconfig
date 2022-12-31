@@ -12,6 +12,7 @@
         autocorrect = 1
 [alias]
         pl = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cd)%Creset - %s %C(bold yellow)<%an>%Creset' --abbrev-commit --date=iso8601
+        hl= log --pretty=format:'%Cred%h%Creset %C(yellow)[%cd]%Creset %Cgreen[%>(25)%ae]%Creset: %s' --abbrev-commit --date=iso8601
         st = status
         rb = rebase
         ci = commit
@@ -38,6 +39,7 @@
 	list-authors = shortlog -e -s -n --no-merges
 	accept-remote-changes = checkout --theirs
 	accept-local-changes = checkout --ours
+	redo-last-commit = reset --soft HEAD~1
 [merge]
         tool = vimdiff
 [push]
