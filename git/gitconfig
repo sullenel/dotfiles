@@ -40,6 +40,7 @@
 	accept-remote-changes = checkout --theirs
 	accept-local-changes = checkout --ours
 	redo-last-commit = reset --soft HEAD~1
+	sf = status -uno
 [merge]
         tool = vimdiff
 [push]
