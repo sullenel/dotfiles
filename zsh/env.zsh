@@ -22,7 +22,7 @@ case "$OSTYPE" in
         export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
         # Ruby
-        export GEM_HOME="$HOME/.gem"
+        export GEM_HOME="$HOME/.tools/gem"
         export PATH="$GEM_HOME/bin:$PATH"
 
         HOMEBREW_RUBY="/opt/homebrew/opt/ruby/bin"
