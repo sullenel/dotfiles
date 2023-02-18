@@ -73,11 +73,12 @@ export CHROME_EXECUTABLE="$BROWSER"
 [[ -d "$HOME/.bin/" ]] && PATH="$HOME/.bin:$PATH"
 
 # NPM
-NPM_PACKAGES="$HOME/.npm-packages"
-NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
-PATH="$NPM_PACKAGES/bin:$PATH"
-unset MANPATH
-MANPATH="$NPM_PACKAGES/share/man:$(manpath)"
+NPM_PACKAGES="$HOME/.tools/npm"
+if [[ -d "$NPM_PACKAGES" ]]
+then
+    NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+    PATH="$NPM_PACKAGES/bin:$PATH"
+fi
 
 # Fastlane
 export FASTLANE_OPT_OUT_USAGE=1
