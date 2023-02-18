@@ -35,17 +35,23 @@ alias disable-font-smoothing="true"
 alias clear-exif="exiftool -all= " # NOTE: overrides the original file
 alias inshallah="sudo" # hehe
 
+# Tmux
+alias tmns="tmux new-session -A -s" # create or open existing session
+
 # Flutter
 alias fpg="fvm flutter packages get"
 alias fpu="fvm flutter packages upgrade"
 alias fap="fvm flutter pub add"
-alias fug="disable-font-smoothing; flutter test --update-goldens; enable-font-smoothing" # update golden files
+alias fug="disable-font-smoothing; fvm flutter test --update-goldens; enable-font-smoothing" # update golden files
 alias fgen="fvm flutter pub run build_runner build --delete-conflicting-outputs"
 alias fwg="fvm flutter pub run build_runner watch --delete-conflicting-outputs"
 alias test-coverage-report="fvm flutter test --coverage && genhtml coverage/lcov.info -o coverage/html && open coverage/html/index.html"
 
 # Android
 alias deeplink-android="adb shell am start -a android.intent.action.VIEW -d"
+alias apk-cert-info="keytool -printcert -jarfile"
+alias enable-firebase-debug="adb shell setprop debug.firebase.analytics.app" # specify package name
+alias disable-firebase-debug="enable-firebase-debug .none."
 
 # Git (conventional commit helpers)
 function ci-feat()      { git commit -m "feat: "$1"" }
@@ -55,6 +61,7 @@ function ci-ref()       { git commit -m "refactor: "$1"" }
 function ci-misc()      { git commit -m "chore: "$1"" }
 function ci-style()     { git commit -m "style: "$1"" }
 function ci-build()     { git commit -m "build: "$1"" }
+function ci-doc()       { git commit -m "docs: "$1"" }
 
 
 # -----------------------------------------------------------------------------
