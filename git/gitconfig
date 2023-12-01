@@ -6,6 +6,7 @@
 	autocrlf = input
         safecrlf = true
         pager = less -R
+	excludesFile = /Users/el/.config/git/gitignore_global
 [color]
         ui = always
 [help]
