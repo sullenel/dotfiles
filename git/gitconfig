@@ -10,7 +10,7 @@
 [color]
         ui = always
 [help]
-        autocorrect = 1
+	autoCorrect = 30
 [alias]
         pl = log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %Cgreen(%cd)%Creset - %s %C(bold yellow)<%an>%Creset' --abbrev-commit --date=iso8601
         hl= log --pretty=format:'%Cred%h%Creset %C(yellow)[%cd]%Creset %Cgreen[%>(25)%ae]%Creset: %s' --abbrev-commit --date=iso8601
