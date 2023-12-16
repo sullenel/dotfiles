@@ -34,6 +34,7 @@ alias disable-font-smoothing="true"
 # Source: https://stackoverflow.com/q/2654281
 alias clear-exif="exiftool -all= " # NOTE: overrides the original file
 alias inshallah="sudo" # hehe
+alias ydl="yt-dlp --format='bestvideo[ext=mp4]+bestaudio[ext=m4a]/137+140/135+140/bestvideo[ext=webm]+bestaudio[ext=webm]/best[ext=mp4]/best' --write-info-json --embed-metadata --ignore-errors --no-post-overwrites --merge-output-format mp4"
 
 # Tmux
 alias tmns="tmux new-session -A -s" # create or open existing session
@@ -86,7 +87,6 @@ case "$OSTYPE" in
     # FIXME: use sw_vers -productName instead
     darwin*)
         alias simsim="open -a Simulator"
-        alias cargo="cd ~/Work/cargo"
         alias send-push-ios="xcrun simctl push booted"
         alias deeplink-ios="xcrun simctl openurl booted"
         alias fl="bundle exec fastlane"
@@ -95,6 +95,7 @@ case "$OSTYPE" in
         alias enable-font-smoothing="defaults -currentHost write -globalDomain AppleFontSmoothing -int 2"
         alias disable-font-smoothing="defaults -currentHost write -globalDomain AppleFontSmoothing -int 0"
         alias ssd-info="smartctl --all /dev/disk0"
+        alias battery-info="ioreg -lrn AppleSmartBattery"
         alias simctl="xcrun simctl"
         # Needs SSID
         alias show-wifi-password="security find-generic-password -wa"
@@ -102,6 +103,8 @@ case "$OSTYPE" in
         alias show-app-entitlements="codesign -dvvv --entitlements - "
         # Show files added to iBooks
         alias show-books="cd $HOME/Library/Mobile\ Documents/iCloud~com~apple~iBooks/Documents"
+        # Start any first Android emulator
+        alias start-emulator="emulator -avd $(emulator -list-avds | head -n 1)"
     ;;
 
     # Linux
