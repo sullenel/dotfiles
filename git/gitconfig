@@ -45,6 +45,7 @@
 	show-root = rev-parse --show-toplevel
 [merge]
         tool = vimdiff
+	conflictStyle = diff3
 [push]
         default = simple
 [diff]
