@@ -44,19 +44,19 @@ case "$OSTYPE" in
         [[ -f "$HOME/.bin/completions/flutter.zsh" ]] && source "$HOME/.bin/completions/flutter.zsh"
 
         # Java
-        export PATH="$(brew --prefix)/opt/openjdk/bin:$PATH"
-        export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
+        export PATH="$(brew --prefix)/opt/openjdk@11/bin:$PATH"
+        export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
 
         # Chromium
         # This is to hide the annoying infobar about missing Google API keys
         export GOOGLE_API_KEY="no"
         export GOOGLE_DEFAULT_CLIENT_ID="no"
         export GOOGLE_DEFAULT_CLIENT_SECRET="no"
+
+        # Homebrew
+        export HOMEBREW_NO_ANALYTICS=1 # fuck this shit
     ;;
 esac
-
-# Terminal
-[ -n "$TMUX" ] && export TERM=screen-256color || export TERM=xterm-256color
 
 # Python
 [[ -f "$HOME/.pyrc" ]] && export PYTHONSTARTUP="$HOME/.pyrc"
@@ -81,10 +81,18 @@ then
 fi
 
 # Fastlane
-export FASTLANE_OPT_OUT_USAGE=1
+export FASTLANE_OPT_OUT_USAGE=1 # fuck this shit too
 
 # Go
 export GOPATH="$HOME/.tools/go"
 
 # Docker
 [[ -d "$HOME/.docker/bin" ]] && PATH="$HOME/.docker/bin:$PATH"
+
+# Rust
+if [[ -d "$HOME/.tools/rust" ]]
+then
+    export RUSTUP_HOME="$HOME/.tools/rust/rustup"
+    export CARGO_HOME="$HOME/.tools/rust/cargo"
+    export PATH="$PATH:$CARGO_HOME/bin"
+fi
