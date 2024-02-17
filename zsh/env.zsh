@@ -36,8 +36,8 @@ case "$OSTYPE" in
         export PATH="$PATH:$ANDROID_HOME/tools"
 
         # Flutter
-        export FVM_HOME="$HOME/.tools/fvm"
-        FLUTTER_PATH="$FVM_HOME/default"
+        export FVM_CACHE_PATH="$HOME/.tools/fvm"
+        FLUTTER_PATH="$FVM_CACHE_PATH/default"
         export PATH="$PATH:$FLUTTER_PATH/bin"
         export PATH="$PATH:$HOME/.pub-cache/bin"
         export FLUTTER_ROOT=$FLUTTER_PATH
