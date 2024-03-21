@@ -103,8 +103,6 @@ case "$OSTYPE" in
         alias show-app-entitlements="codesign -dvvv --entitlements - "
         # Show files added to iBooks
         alias show-books="cd $HOME/Library/Mobile\ Documents/iCloud~com~apple~iBooks/Documents"
-        # Start any first Android emulator
-        alias start-emulator="emulator -avd $(emulator -list-avds | head -n 1)"
     ;;
 
     # Linux
