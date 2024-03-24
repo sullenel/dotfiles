@@ -5,7 +5,7 @@
 	editor = nvim
 	autocrlf = input
         safecrlf = true
-        pager = less -R
+	pager = less
 	excludesFile = /Users/el/.config/git/gitignore_global
 [color]
         ui = always
@@ -50,6 +50,7 @@
         default = simple
 [diff]
         tool = vimdiff
+	algorithm = histogram
 [difftool]
         prompt = false
 [pull]
