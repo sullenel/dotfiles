@@ -18,6 +18,8 @@ alias diff="colordiff"
 alias info="info --vi-keys"
 alias h="fc -l 1" # history
 alias j="jobs -l"
+# Source: https://twitter.com/0xAsm0d3us/status/1774534241084445020
+alias cat="cat -v" # sort of safe
 
 alias todayis="date '+%B %d, %Y [%A] [%l:%M %p]'"
 alias fping="ping -c 5 -n -i 0.2 -W1"
@@ -46,6 +48,7 @@ alias fap="fvm flutter pub add"
 alias fug="disable-font-smoothing; fvm flutter test --update-goldens; enable-font-smoothing" # update golden files
 alias fgen="fvm flutter pub run build_runner build --delete-conflicting-outputs"
 alias fwg="fvm flutter pub run build_runner watch --delete-conflicting-outputs"
+alias fest="fvm flutter test --reporter=github"
 alias test-coverage-report="fvm flutter test --coverage && genhtml coverage/lcov.info -o coverage/html && open coverage/html/index.html"
 
 # Android
@@ -103,6 +106,7 @@ case "$OSTYPE" in
         alias show-app-entitlements="codesign -dvvv --entitlements - "
         # Show files added to iBooks
         alias show-books="cd $HOME/Library/Mobile\ Documents/iCloud~com~apple~iBooks/Documents"
+        alias get-core-count="sysctl -n hw.physicalcpu" # returns the number of cores
     ;;
 
     # Linux
