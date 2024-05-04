@@ -11,6 +11,12 @@ fi
 # Mac OS
 case "$OSTYPE" in
     darwin*)
+        # Consistency is the key
+        export XDG_CONFIG_HOME="$HOME/.config"
+        export XDG_DATA_HOME="$HOME/.local/share"
+        export XDG_STATE_HOME="$HOME/.local/state"
+        export XDG_CACHE_HOME="$HOME/.cache"
+
         # For shell completions: https://docs.brew.sh/Shell-Completion
         if type brew &>/dev/null
         then
