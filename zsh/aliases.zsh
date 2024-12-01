@@ -36,7 +36,7 @@ alias disable-font-smoothing="true"
 # Source: https://stackoverflow.com/q/2654281
 alias clear-exif="exiftool -all= " # NOTE: overrides the original file
 alias inshallah="sudo" # hehe
-alias ydl="yt-dlp --format='bestvideo[ext=mp4]+bestaudio[ext=m4a]/137+140/135+140/bestvideo[ext=webm]+bestaudio[ext=webm]/best[ext=mp4]/best' --write-info-json --embed-metadata --ignore-errors --no-post-overwrites --merge-output-format mp4"
+alias ydl="yt-dlp --cookies-from-browser chrome --format='bestvideo[ext=mp4]+bestaudio[ext=m4a]/137+140/135+140/bestvideo[ext=webm]+bestaudio[ext=webm]/best[ext=mp4]/best' --write-info-json --embed-metadata --ignore-errors --no-post-overwrites --merge-output-format mp4"
 
 # Tmux
 alias tmns="tmux new-session -A -s" # create or open existing session
