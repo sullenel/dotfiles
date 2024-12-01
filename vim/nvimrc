@@ -6,12 +6,10 @@
   " Actual plugins
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
-  Plug 'tpope/vim-commentary'
   Plug 'bling/vim-airline'
   Plug 'tpope/vim-surround'
   Plug 'mattn/emmet-vim'
   Plug 'majutsushi/tagbar', { 'on': 'TagbarToggle' }
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 
   " Syntax
   Plug 'aliva/vim-fish', { 'for': 'fish' }
@@ -76,9 +74,6 @@
   " Dart
   let dart_format_on_save = 1
   let dart_style_guide = 2
-
-  " Start deoplete
-  let g:deoplete#enable_at_startup = 1
 
   " GO
   let g:go_fmt_command = "gofmt"
@@ -510,4 +505,10 @@
       echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
     endif
   endfunction
+
+  " Restore cursor shape in terminal
+  augroup RestoreCursorShapeOnExit
+    autocmd!
+    autocmd VimLeave * set guicursor=a:hor20
+  augroup END
 " -----------------------------------------------------------------------------
