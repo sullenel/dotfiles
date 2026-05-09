@@ -58,6 +58,7 @@ alias enable-firebase-debug="adb shell setprop debug.firebase.analytics.app" # s
 alias disable-firebase-debug="enable-firebase-debug .none."
 
 # Git (conventional commit helpers)
+alias boss=git
 function ci-feat()      { git commit -m "feat: "$1"" }
 function ci-fix()       { git commit -m "fix: "$1"" }
 function ci-test()      { git commit -m "test: "$1"" }

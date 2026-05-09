@@ -31,6 +31,8 @@ setopt PATH_DIRS
 setopt RM_STAR_WAIT
 setopt LONG_LIST_JOBS
 setopt PROMPT_SUBST
+setopt PIPE_FAIL
+
 unsetopt HUP
 unsetopt BEEP
 unsetopt CORRECT_ALL

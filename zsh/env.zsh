@@ -50,8 +50,8 @@ case "$OSTYPE" in
         [[ -f "$HOME/.bin/completions/flutter.zsh" ]] && source "$HOME/.bin/completions/flutter.zsh"
 
         # Java
-        export PATH="$(brew --prefix)/opt/openjdk@11/bin:$PATH"
-        export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
+        export PATH="$(brew --prefix)/opt/openjdk@25/bin:$PATH"
+        export CPPFLAGS="-I/opt/homebrew/opt/openjdk@25/include"
 
         # Chromium
         # This is to hide the annoying infobar about missing Google API keys
@@ -61,6 +61,7 @@ case "$OSTYPE" in
 
         # Homebrew
         export HOMEBREW_NO_ANALYTICS=1 # fuck this shit
+        export HOMEBREW_NO_AUTO_UPDATE=1 # fuck this shit too
     ;;
 esac
 
@@ -72,8 +73,8 @@ export EDITOR="nvim"
 export VISUAL=$EDITOR
 
 # Browser
-export BROWSER="chromium"
-export CHROME_EXECUTABLE="$BROWSER"
+export BROWSER="google-chrome"
+export CHROME_EXECUTABLE="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 # Scripts
 [[ -d "$HOME/.bin/" ]] && PATH="$HOME/.bin:$PATH"
