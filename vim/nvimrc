@@ -13,12 +13,6 @@
 
   " Syntax
   Plug 'aliva/vim-fish', { 'for': 'fish' }
-  Plug 'fatih/vim-go', { 'for': 'go', 'do': ':GoUpdateBinaries' }
-  Plug 'pangloss/vim-javascript'
-  Plug 'MaxMEllon/vim-jsx-pretty'
-  Plug 'justinmk/vim-syntax-extra'
-  Plug 'dart-lang/dart-vim-plugin'
-  Plug 'keith/swift.vim', { 'for': 'swift' }
 
   " Colorschemes
   Plug 'blueshirts/darcula'
