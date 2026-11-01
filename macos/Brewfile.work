@@ -1,0 +1,122 @@
+# Work setup: packages selected from Brewfile.
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+# Development kit for the Java programming language
+brew "openjdk"
+# Tool for reverse engineering 3rd party, closed, binary Android apps
+brew "apktool"
+# Download with resuming and segmented downloading
+brew "aria2"
+# Statistics utility to count lines of code
+brew "cloc"
+# Dependency manager for Cocoa projects
+brew "cocoapods"
+# Color-highlighted diff(1) output
+brew "colordiff"
+# Perl lib for reading and writing EXIF metadata
+brew "exiftool"
+# Easiest way to build and release mobile apps
+brew "fastlane"
+# Identify or delete duplicate files
+brew "fdupes"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Firebase command-line tools
+brew "firebase-cli"
+# Manage Flutter SDK versions per project
+brew "fvm"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Render markdown on the CLI
+brew "glow"
+# Tools and libraries to manipulate images in select formats
+brew "imagemagick"
+# Dex to Java decompiler
+brew "jadx"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Graphical front-end for GCC's coverage testing tool (gcov)
+brew "lcov"
+# Curses-based tool for viewing and analyzing log files
+brew "lnav"
+# NCurses Disk Usage
+brew "ncdu"
+# Ambitious Vim-fork focused on extensibility and agility
+brew "neovim"
+# Command-line Git information tool
+brew "onefetch"
+# Development kit for the Java programming language
+brew "openjdk@17"
+# Password generator
+brew "pwgen"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
+# Display and control your Android device
+brew "scrcpy"
+# Analyze how space is allocated inside an SQLite file
+brew "sqlite-analyzer"
+# Terminal multiplexer
+brew "tmux"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Tools for building Android applications
+cask "android-studio"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# Browser for SQLite databases
+cask "db-browser-for-sqlite"
+# Collaborative team software
+cask "figma"
+cask "font-cascadia-code"
+cask "font-cascadia-mono"
+cask "font-comic-mono"
+cask "font-commit-mono"
+cask "font-fira-code"
+cask "font-geist-mono"
+cask "font-ibm-plex-mono"
+cask "font-jetbrains-mono"
+cask "font-martian-mono"
+cask "font-monaspace"
+cask "font-mononoki"
+cask "font-space-mono"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
+cask "google-chrome"
+# HTTP(S) debugging proxy, analyzer, and client
+cask "http-toolkit"
+# Testing client for REST, GraphQL, and HTTP APIs
+cask "httpie-desktop"
+# Free and open-source media player
+cask "iina"
+# Tool to optimise images to a smaller size
+cask "imageoptim"
+# HTTP and GraphQL Client
+cask "insomnia"
+# Java IDE by JetBrains
+cask "intellij-idea"
+# Clipboard manager
+cask "maccy"
+# App for launching iOS and Android simulators
+cask "minisim"
+# Intercept, modify, replay, save HTTP/S traffic
+cask "mitmproxy"
+# Simple application that will prevent iTunes or Apple Music from launching
+cask "notunes"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# Quick Look generator for Markdown files
+cask "qlmarkdown"
+# Tool that provides consistent, highly configurable symbols for apps
+cask "sf-symbols"
+# Graphical client for Git version control
+cask "sourcetree"
+# Native database client for many database types
+cask "tablepro"
+# Multiplayer code editor
+cask "zed"
