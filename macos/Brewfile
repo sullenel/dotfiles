@@ -1,71 +1,159 @@
-tap "dart-lang/dart"
+tap "dart-lang/dart", trusted: true
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-fonts"
 tap "homebrew/core"
-tap "leoafarias/fvm"
+tap "libkrun/krun", "https://github.com/libkrun/homebrew-krun.git"
+tap "nohajc/anylinuxfs", trusted: true
 tap "wader/tap"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
+# Development kit for the Java programming language
 brew "openjdk"
+# Tool for reverse engineering 3rd party, closed, binary Android apps
 brew "apktool"
+# Download with resuming and segmented downloading
 brew "aria2"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Statistics utility to count lines of code
 brew "cloc"
+# Dependency manager for Cocoa projects
 brew "cocoapods"
+# Color-highlighted diff(1) output
 brew "colordiff"
-brew "rtmpdump"
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
+# Diff that understands syntax
 brew "difftastic"
+# Disk Usage/Free Utility - a better 'df' alternative
+brew "duf"
+# More intuitive version of du in rust
+brew "dust"
+# Perl lib for reading and writing EXIF metadata
 brew "exiftool"
+# Easiest way to build and release mobile apps
+brew "fastlane"
+# Identify or delete duplicate files
 brew "fdupes"
-brew "tesseract"
-brew "node"
-brew "firebase-cli"
-brew "fish"
-brew "flvmeta"
-brew "fzf"
-brew "git"
-brew "git-lfs"
-brew "go"
-brew "helix"
-brew "htop"
-brew "hyperfine"
+# Portable Foreign Function Interface library
 brew "libffi"
+# Open-source, cross-platform JavaScript runtime environment
+brew "node"
+# Firebase command-line tools
+brew "firebase-cli"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# Manipulate Adobe flash video files (FLV)
+brew "flvmeta"
+# Manage Flutter SDK versions per project
+brew "fvm"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GitHub command-line tool
+brew "gh"
+# Distributed revision control system
+brew "git"
+# Git extension for versioning large files
+brew "git-lfs"
+# Alternative to top/htop
+brew "glances"
+# Render markdown on the CLI
+brew "glow"
+# Open source programming language to build simple/reliable/efficient software
+brew "go"
+# Post-modern modal text editor
+brew "helix"
+# Improved top (interactive process viewer)
+brew "htop"
+# Command-line benchmarking tool
+brew "hyperfine"
+# Command-line editor
+brew "id3v2"
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Dex to Java decompiler
 brew "jadx"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Graphical front-end for GCC's coverage testing tool (gcov)
 brew "lcov"
+# Curses-based tool for viewing and analyzing log files
 brew "lnav"
+# Unified display of technical and tag data for audio/video
 brew "media-info"
+# Command-line client for Mega.co.nz
 brew "megatools"
+# Deep clean and optimize your Mac
+brew "mole"
+# NCurses Disk Usage
 brew "ncdu"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# HTTP/2 C Library
+brew "nghttp2"
+# Command-line Git information tool
 brew "onefetch"
-brew "openjdk@11"
+# Development kit for the Java programming language
+brew "openjdk@17"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Show ps output as a tree
 brew "pstree"
+# Password generator
 brew "pwgen"
+# Reverse engineering framework
 brew "radare2"
+# Ruby version manager
 brew "rbenv"
+# Persistent key-value database, with built-in net interface
 brew "redis"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Extremely fast tool to remove dupes and other lint from your filesystem
 brew "rmlint"
+# CLI for managing and maintaining data graphs with Apollo Studio
 brew "rover"
+# Tool for downloading RTMP streaming media
+brew "rtmpdump"
+# Display and control your Android device
 brew "scrcpy"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
+# SMART hard drive monitoring
 brew "smartmontools"
+# Analyze how space is allocated inside an SQLite file
 brew "sqlite-analyzer"
-brew "swift-format"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale", restart_service: :changed
+# OCR (Optical Character Recognition) engine
+brew "tesseract"
+# Terminal multiplexer
 brew "tmux"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Feature-rich command-line audio/video downloader
 brew "yt-dlp"
-brew "leoafarias/fvm/fvm"
-brew "wader/tap/fq"
-cask "android-file-transfer"
+# Mount any linux-supported filesystem read/write using nfs and a microVM
+brew "nohajc/anylinuxfs/anylinuxfs"
+# Tools for building Android applications
 cask "android-studio"
-cask "anydesk"
+# Terminal-based AI coding assistant
+cask "claude-code"
+# Tool to show live information about the batteries in various devices
 cask "coconutbattery"
+# Browser for SQLite databases
 cask "db-browser-for-sqlite"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
+# Collaborative team software
+cask "figma"
 cask "font-cascadia-code"
 cask "font-cascadia-mono"
+cask "font-comic-mono"
 cask "font-commit-mono"
+cask "font-fira-code"
 cask "font-geist-mono"
 cask "font-ibm-plex-mono"
 cask "font-jetbrains-mono"
@@ -73,54 +161,64 @@ cask "font-martian-mono"
 cask "font-monaspace"
 cask "font-mononoki"
 cask "font-space-mono"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
+# Web browser
 cask "google-chrome"
-cask "httpie"
+# HTTP(S) debugging proxy, analyzer, and client
+cask "http-toolkit"
+# Testing client for REST, GraphQL, and HTTP APIs
+cask "httpie-desktop"
+# Free and open-source media player
 cask "iina"
+# Tool to optimise images to a smaller size
 cask "imageoptim"
-cask "inkscape"
+# HTTP and GraphQL Client
 cask "insomnia"
+# Java IDE by JetBrains
+cask "intellij-idea"
+# Clipboard manager
 cask "maccy"
+# App for launching iOS and Android simulators
 cask "minisim"
+# Intercept, modify, replay, save HTTP/S traffic
 cask "mitmproxy"
+# Free and open-source RSS reader
+cask "netnewswire"
+# Simple application that will prevent iTunes or Apple Music from launching
+cask "notunes"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Peer to peer Bitorrent client
 cask "qbittorrent"
+# Quick Look generator for Markdown files
 cask "qlmarkdown"
-cask "quicklook-json"
-cask "rapidapi"
-cask "rectangle"
+# Tool that provides consistent, highly configurable symbols for apps
 cask "sf-symbols"
-cask "swimat"
-cask "tiny-player"
-cask "visual-studio-code"
-cask "wireshark"
+# Graphical client for Git version control
+cask "sourcetree"
+# Native database client for many database types
+cask "tablepro"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
+# Multiplayer code editor
 cask "zed"
-vscode "dart-code.dart-code"
-vscode "dart-code.flutter"
-vscode "eamodio.gitlens"
-vscode "golang.go"
-vscode "graphql.vscode-graphql"
-vscode "graphql.vscode-graphql-syntax"
-vscode "monokai.theme-monokai-pro-vscode"
-vscode "ms-azure-devops.azure-pipelines"
-vscode "ms-azuretools.vscode-azureresourcegroups"
-vscode "ms-azuretools.vscode-docker"
-vscode "ms-vscode.azure-account"
-vscode "ms-vscode.cmake-tools"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.cpptools-extension-pack"
-vscode "ms-vscode.cpptools-themes"
-vscode "ms-vscode.makefile-tools"
-vscode "pkief.material-icon-theme"
-vscode "redhat.java"
-vscode "rust-lang.rust-analyzer"
-vscode "sswg.swift-lang"
-vscode "twxs.cmake"
-vscode "vadimcn.vscode-lldb"
-vscode "visualstudioexptteam.intellicode-api-usage-examples"
-vscode "visualstudioexptteam.vscodeintellicode"
-vscode "vknabel.vscode-apple-swift-format"
-vscode "vscjava.vscode-java-debug"
-vscode "vscjava.vscode-java-dependency"
-vscode "vscjava.vscode-java-pack"
-vscode "vscjava.vscode-java-test"
-vscode "vscjava.vscode-maven"
+go "github.com/klauspost/asmfmt/cmd/asmfmt"
+go "github.com/go-delve/delve/cmd/dlv"
+go "github.com/kisielk/errcheck"
+go "github.com/davidrjenni/reftools/cmd/fillstruct"
+go "github.com/rogpeppe/godef"
+go "golang.org/x/tools/cmd/goimports"
+go "github.com/golangci/golangci-lint/v2/cmd/golangci-lint"
+go "github.com/fatih/gomodifytags"
+go "golang.org/x/tools/gopls"
+go "golang.org/x/tools/cmd/gorename"
+go "github.com/jstemmer/gotags"
+go "golang.org/x/tools/cmd/guru"
+go "github.com/koron/iferr"
+go "github.com/josharian/impl"
+go "honnef.co/go/tools/cmd/keyify"
+go "github.com/fatih/motion"
+go "github.com/mgechev/revive"
+go "honnef.co/go/tools/cmd/staticcheck"
+npm "typescript-language-server"
