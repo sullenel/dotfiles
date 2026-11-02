@@ -1,7 +1,4 @@
 tap "dart-lang/dart", trusted: true
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "libkrun/krun", "https://github.com/libkrun/homebrew-krun.git"
 tap "nohajc/anylinuxfs", trusted: true
 tap "wader/tap"

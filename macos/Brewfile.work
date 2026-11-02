@@ -1,7 +1,4 @@
 # Work setup: packages selected from Brewfile.
-tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 # Development kit for the Java programming language
 brew "openjdk"
 # Tool for reverse engineering 3rd party, closed, binary Android apps
